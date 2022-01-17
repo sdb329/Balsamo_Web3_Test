@@ -476,7 +476,6 @@ button:hover {
 header {
   background-color: #15344F;
   left: 0;
-  position: fixed;
   top: 0;
   width: 100%;
 }
@@ -752,14 +751,6 @@ header #header-button > button {
   }
 }
 
-#hero {
-  padding-top: 210px;
-}
-@media (min-width: 768px) {
-  #hero {
-    padding-top: 160px;
-  }
-}
 #hero a {
   text-decoration: none;
 }
