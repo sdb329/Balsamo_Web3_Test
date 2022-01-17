@@ -10,14 +10,14 @@ export function scrollAnimation(){
 
     const tl = new gsap.timeline();
 
-    tl.from("#hero",{
+    tl.from(".beach",{
         duration: 6,
         // x: "+=150",
         alpha: 0,
         stagger: 0.4,
         ease: "back",
         scrollTrigger: {
-            trigger: "#hero-image",
+            trigger: "#region-1",
             toggleActions: "restart none resume none",
             markers: true,
             scrub: true
