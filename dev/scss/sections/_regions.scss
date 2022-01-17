@@ -1,0 +1,485 @@
+#regions {
+	margin: 48px 0px;
+	@include md {
+		margin: 72px 0px;
+	}
+	@include lg {
+		margin: 104px 0px;
+	}
+	@include xl {
+		margin: 112px 0px;
+	}
+	>div {
+		display: flex;
+		justify-content: center;
+		>h4 {
+			color: $darkblue;
+			font-size: rem-calc(50px);
+			font-variation-settings: "wght"600;
+			padding-bottom: 24px;
+			@include md {
+				font-size: rem-calc(100px);
+				font-variation-settings: "wght"600;
+				padding-bottom: 32px;
+			}
+		}
+	}
+	#map-image {
+		background-image: url("../img/regions/map.jpg");
+		background-position: center;
+		background-size: cover;
+		height: 355px;
+		@include md {
+			height: 515px;
+		}
+		@include lg {
+			height: 1000px;
+		}
+	}
+	.region-formatting {
+		margin: 32px 0px;
+		@include md {
+			margin: 48px 0px;
+		}
+		@include lg {
+			margin: 72px 0px;
+		}
+		@include xl {
+			margin: 104px 0px;
+		}
+		.r-title {
+			color: $greenblue;
+			font-size: rem-calc(50px);
+			font-variation-settings: "wght"200;
+			line-height: .85;
+			padding: 0px 0px 16px 0px;
+			@include md {
+				font-size: rem-calc(72px);
+			}
+			@include lg {
+				font-size: rem-calc(100px);
+			}
+		}
+		.r-background {
+			background-color: $lightblue;
+			padding: 16px;
+			>p {
+				line-height: 1.4;
+			}
+			@include md {
+				padding: 20px 22px;
+			}
+			@include lg {
+				padding: 10% 10%;
+			}
+			>div {
+				display: flex;
+				justify-content: flex-end;
+				>button {
+					margin-top: 16px;
+				}
+			}
+		}
+	}
+	.region-img-ht {
+		height: 250px;
+		@include md {
+			height: 300px;
+		}
+		@include lg {
+			height: 430px;
+		}
+	}
+	#region1-image {
+		background-image: url("../img/regions/region1.jpg");
+		background-position: center;
+		background-size: cover;
+	}
+	#region2-image {
+		background-image: url("../img/regions/region2.jpg");
+		background-position: center;
+		background-size: cover;
+	}
+	#region3-image {
+		background-image: url("../img/regions/region3.jpg");
+		background-position: 0px -130px;
+		background-size: cover;
+		@include md {
+			background-position: top;
+		}
+	}
+	#region4-image {
+		background-image: url("../img/regions/region4.jpg");
+		background-position: center;
+		background-size: cover;
+	}
+	#region5-image {
+		background-image: url("../img/regions/region5.jpg");
+		background-position: top left;
+		background-size: cover;
+	}
+	#region6-image {
+		background-image: url("../img/regions/region6.jpg");
+		background-position: center;
+		background-size: cover;
+	}
+	.shore-p2 {
+		display: none;
+		padding-top: 24px;
+		@include lg {
+			display: list-item;
+		}
+	}
+	.beach {
+		display: grid;
+		grid-template-areas: ". region1 ."
+            ". region2 ."
+            ". region3 ."
+            ". region4 ."
+            ". region5 ."
+            ". region6 .";
+		grid-template-columns: 16px auto 16px;
+		@include md {
+			#region-1 {
+				display: grid;
+				grid-template-areas: "region region ."
+                    "text image1 .";
+				grid-template-columns: 50% 40% auto;
+				.r-title {
+					grid-area: region;
+				}
+				>div {
+					grid-area: text;
+				}
+				#region1-image {
+					grid-area: image1;
+				}
+			}
+			#region-2 {
+				display: grid;
+				grid-template-areas: ". region region"
+                    ". image1 text";
+				grid-template-columns: auto 40% 50%;
+				.r-title {
+					grid-area: region;
+					text-align: right;
+				}
+				>div {
+					grid-area: text;
+					>p {
+						text-align: right;
+					}
+				}
+				#region2-image {
+					grid-area: image1;
+				}
+			}
+			#region-3 {
+				display: grid;
+				grid-template-areas: "region region ."
+                    "text image1 .";
+				grid-template-columns: 50% 40% auto;
+				.r-title {
+					grid-area: region;
+				}
+				>div {
+					grid-area: text;
+				}
+				#region3-image {
+					grid-area: image1;
+				}
+			}
+			#region-4 {
+				display: grid;
+				grid-template-areas: ". region region"
+                    ". image1 text";
+				grid-template-columns: auto 40% 50%;
+				.r-title {
+					grid-area: region;
+					text-align: right;
+				}
+				>div {
+					grid-area: text;
+					>p {
+						text-align: right;
+					}
+				}
+				#region4-image {
+					grid-area: image1;
+				}
+			}
+			#region-5 {
+				display: grid;
+				grid-template-areas: "region region ."
+                    "text image1 .";
+				grid-template-columns: 50% 40% auto;
+				.r-title {
+					grid-area: region;
+				}
+				>div {
+					grid-area: text;
+				}
+				#region5-image {
+					grid-area: image1;
+				}
+			}
+			#region-6 {
+				display: grid;
+				grid-template-areas: ". region region"
+                    ". image1 text";
+				grid-template-columns: auto 40% 50%;
+				.r-title {
+					grid-area: region;
+					text-align: right;
+				}
+				>div {
+					grid-area: text;
+					>p {
+						text-align: right;
+					}
+				}
+				#region6-image {
+					grid-area: image1;
+				}
+			}
+		}
+		#region-1 {
+			grid-area: region1;
+		}
+		#region-2 {
+			grid-area: region2;
+		}
+		#region-3 {
+			grid-area: region3;
+		}
+		#region-4 {
+			grid-area: region4;
+		}
+		#region-5 {
+			grid-area: region5;
+		}
+		#region-6 {
+			grid-area: region6;
+		}
+		@include lg {
+			#region-1 {
+				display: grid;
+				grid-template-areas: "region region ."
+                    "text image1 .";
+				grid-template-columns: 60% 30% auto;
+				.r-title {
+					grid-area: region;
+				}
+				>div {
+					grid-area: text;
+					>p {
+						text-align: justify;
+					}
+				}
+				#region1-image {
+					grid-area: image1;
+				}
+			}
+			#region-2 {
+				display: grid;
+				grid-template-areas: ". region region"
+                    ". image1 text";
+				grid-template-columns: auto 30% 60%;
+				.r-title {
+					grid-area: region;
+					text-align: right;
+				}
+				>div {
+					grid-area: text;
+					>p {
+						text-align: justify;
+					}
+				}
+				#region2-image {
+					grid-area: image1;
+				}
+			}
+			#region-3 {
+				display: grid;
+				grid-template-areas: "region region ."
+                    "text image1 .";
+				grid-template-columns: 60% 30% auto;
+				.r-title {
+					grid-area: region;
+				}
+				>div {
+					grid-area: text;
+					>p {
+						text-align: justify;
+					}
+				}
+				#region3-image {
+					grid-area: image1;
+				}
+			}
+			#region-4 {
+				display: grid;
+				grid-template-areas: ". region region"
+                    ". image1 text";
+				grid-template-columns: auto 30% 60%;
+				.r-title {
+					grid-area: region;
+					text-align: right;
+				}
+				>div {
+					grid-area: text;
+					>p {
+						text-align: justify;
+					}
+				}
+				#region4-image {
+					grid-area: image1;
+				}
+			}
+			#region-5 {
+				display: grid;
+				grid-template-areas: "region region ."
+                    "text image1 .";
+				grid-template-columns: 60% 30% auto;
+				.r-title {
+					grid-area: region;
+				}
+				>div {
+					grid-area: text;
+					>p {
+						text-align: justify;
+					}
+				}
+				#region5-image {
+					grid-area: image1;
+				}
+			}
+			#region-6 {
+				display: grid;
+				grid-template-areas: ". region region"
+                    ". image1 text";
+				grid-template-columns: auto 30% 60%;
+				.r-title {
+					grid-area: region;
+					text-align: right;
+				}
+				>div {
+					grid-area: text;
+					>p {
+						text-align: justify;
+					}
+				}
+				#region6-image {
+					grid-area: image1;
+				}
+			}
+		}
+		@include xl {
+			#region-1 {
+				display: grid;
+				grid-template-areas: "region region ."
+                    "text image1 .";
+				grid-template-columns: 40% 30% auto;
+				.r-title {
+					grid-area: region;
+				}
+				>div {
+					grid-area: text;
+				}
+				#region1-image {
+					grid-area: image1;
+				}
+			}
+			#region-2 {
+				display: grid;
+				grid-template-areas: ". region region"
+                    ". image1 text";
+				grid-template-columns: auto 30% 40%;
+				.r-title {
+					grid-area: region;
+					text-align: right;
+				}
+				>div {
+					grid-area: text;
+				}
+				#region2-image {
+					grid-area: image1;
+				}
+			}
+			#region-3 {
+				display: grid;
+				grid-template-areas: "region region ."
+                    "text image1 .";
+				grid-template-columns: 40% 30% auto;
+				.r-title {
+					grid-area: region;
+				}
+				>div {
+					grid-area: text;
+				}
+				#region3-image {
+					grid-area: image1;
+				}
+			}
+			#region-4 {
+				display: grid;
+				grid-template-areas: ". region region"
+                    ". image1 text";
+				grid-template-columns: auto 30% 40%;
+				.r-title {
+					grid-area: region;
+					text-align: right;
+				}
+				>div {
+					grid-area: text;
+				}
+				#region4-image {
+					grid-area: image1;
+				}
+			}
+			#region-5 {
+				display: grid;
+				grid-template-areas: "region region ."
+                    "text image1 .";
+				grid-template-columns: 40% 30% auto;
+				.r-title {
+					grid-area: region;
+				}
+				>div {
+					grid-area: text;
+				}
+				#region5-image {
+					grid-area: image1;
+				}
+			}
+			#region-6 {
+				display: grid;
+				grid-template-areas: ". region region"
+                    ". image1 text";
+				grid-template-columns: auto 30% 40%;
+				.r-title {
+					grid-area: region;
+					text-align: right;
+				}
+				>div {
+					grid-area: text;
+				}
+				#region6-image {
+					grid-area: image1;
+				}
+			}
+		}
+	}
+	#beach-hero {
+		background-image: url("../img/regions/beach.jpg");
+		background-position: center;
+		background-size: cover;
+		height: 360px;
+		@include md {
+			height: 640px;
+		}
+		@include lg {
+			height: 1000px;
+		}
+	}
+}

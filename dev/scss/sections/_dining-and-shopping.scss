@@ -1,0 +1,326 @@
+#dining-and-shopping {
+	ul {
+		display: grid;
+		grid-template-areas: ". title ."
+        ". sub ."
+        ". b1 ."
+        ". b2 ."
+        ". b3 ."
+        ". b4 ."
+        ". b5 .";
+		grid-template-columns: 16px auto 16px;
+		>li {
+			>button {
+				border-radius: 20px;
+				font-size: rem-calc(40);
+				font-variation-settings: "wght"290;
+				margin: 24px 0px;
+				width: 100%;
+				@include md {
+					font-size: rem-calc(72);
+					margin: 32px 0px;
+				}
+				@include lg {
+					padding: 20px 0;
+				}
+			}
+		}
+		#ds-title {
+			color: $darkblue;
+			font-size: rem-calc(40);
+			font-variation-settings: "wght"600;
+			grid-area: title;
+			line-height: .85;
+			margin-bottom: 30px;
+			margin-top: 52px;
+			text-align: center;
+			@include md {
+				font-size: rem-calc(65);
+			}
+			@include xl {
+				display: list-item;
+			}
+		}
+		#ds-sub1 {
+			color: $darkblue;
+			font-size: rem-calc(40);
+			font-variation-settings: "wght"290;
+			grid-area: sub;
+			text-align: center;
+			@include md {
+				font-size: rem-calc(72);
+			}
+		}
+		#ds-button1 {
+			grid-area: b1;
+			text-align: center;
+		}
+		#ds-button2 {
+			grid-area: b2;
+			text-align: center;
+		}
+		#ds-button3 {
+			grid-area: b3;
+			text-align: center;
+		}
+		#ds-button4 {
+			grid-area: b4;
+			text-align: center;
+		}
+		#ds-button5 {
+			grid-area: b5;
+			text-align: center;
+		}
+		@include lg {
+			display: grid;
+			grid-template-areas: ". title ."
+                ". sub ."
+                ". b1 ."
+                ". b2 ."
+                ". b3 ."
+                ". b4 ."
+                ". b5 .";
+			grid-template-columns: 95px auto 95px;
+			#ds-title {
+				grid-area: title;
+			}
+			#ds-sub1 {
+				grid-area: sub;
+			}
+			#ds-button1 {
+				grid-area: b1;
+			}
+			#ds-button2 {
+				grid-area: b2;
+			}
+			#ds-button3 {
+				grid-area: b3;
+			}
+			#ds-button4 {
+				grid-area: b4;
+			}
+			#ds-button5 {
+				grid-area: b5;
+			}
+		}
+		@include xl {
+			display: grid;
+			grid-template-areas: ". title ."
+                ". sub ."
+                ". b1 ."
+                ". b2 ."
+                ". b3 ."
+                ". b4 ."
+                ". b5 .";
+			grid-template-columns: auto 1200px auto;
+			#ds-title {
+				grid-area: title;
+			}
+			#ds-sub1 {
+				grid-area: sub;
+			}
+			#ds-button1 {
+				grid-area: b1;
+			}
+			#ds-button2 {
+				grid-area: b2;
+			}
+			#ds-button3 {
+				grid-area: b3;
+			}
+			#ds-button4 {
+				grid-area: b4;
+			}
+			#ds-button5 {
+				grid-area: b5;
+			}
+		}
+	}
+}
+#shopping {
+	#img-outlet {
+		background-image: url("../img/shopping/shopping1.jpg");
+		background-position: top;
+		background-size: cover;
+		height: 250px;
+		@include md {
+			height: 350px;
+		}
+	}
+	#img-mall {
+		background-image: url("../img/shopping/shopping2.jpg");
+		background-position: center;
+		background-size: cover;
+		height: 250px;
+		@include md {
+			height: 350px;
+		}
+	}
+	#img-business {
+		background-image: url("../img/local-businesses/business.jpg");
+		background-position: center;
+		background-size: cover;
+		height: 325px;
+		@include md {
+			height: 679px;
+		}
+	}
+	ul {
+		display: grid;
+		grid-template-areas: ". sub2 ."
+        ". outlet ."
+        ". mall .";
+		grid-template-columns: 16px auto 16px;
+		li {
+			>div {
+				>aside {
+					display: none;
+					@include md {
+						display: list-item;
+						>p {
+							color: $darkblue;
+							font-variation-settings: "wght"400;
+							line-height: 1.2;
+							padding: 0px 16px 16px 16px;
+							text-align: justify;
+						}
+					}
+				}
+			}
+		}
+		#ds-sub2 {
+			color: $darkblue;
+			font-size: rem-calc(40);
+			font-variation-settings: "wght"300;
+			grid-area: sub2;
+			line-height: .8;
+			padding-top: 16px;
+			text-align: center;
+		}
+		#ds-outlet {
+			grid-area: outlet;
+			>h3 {
+				color: $lightblue;
+				font-size: rem-calc(40);
+				font-variation-settings: "wght"300;
+				line-height: .8;
+				padding: 32px 0px 16px;
+				text-align: center;
+			}
+			#img-outlet {
+				margin-bottom: 16px;
+			}
+			.flex-ds-button {
+				display: flex;
+				justify-content: center;
+				padding: 0px 16px;
+				@include lg {
+					justify-content: flex-start;
+				}
+			}
+		}
+		#ds-mall {
+			grid-area: mall;
+			>h3 {
+				color: $lightblue;
+				font-size: rem-calc(40);
+				font-variation-settings: "wght"300;
+				line-height: .8;
+				padding: 32px 0px 16px;
+				text-align: center;
+			}
+			#img-mall {
+				margin-bottom: 16px;
+			}
+			.flex-ds-button {
+				display: flex;
+				justify-content: center;
+				padding: 0px 16px;
+				@include lg {
+					justify-content: flex-end;
+				}
+			}
+		}
+		@include md {
+			display: grid;
+			grid-template-areas: ". sub2 ."
+                ". outlet ."
+                ". mall .";
+			grid-template-columns: 140px auto 140px;
+			#ds-sub2 {
+				grid-area: sub2;
+			}
+			#ds-outlet {
+				grid-area: outlet;
+			}
+			#ds-mall {
+				grid-area: mall;
+			}
+		}
+		@include lg {
+			#ds-outlet {
+				display: grid;
+				grid-template-areas: "title . ."
+                    "image content .";
+				grid-template-columns: 50% 40% auto;
+				#outlet {
+					grid-area: title;
+				}
+				#img-outlet {
+					grid-area: image;
+				}
+				#outlet-content {
+					grid-area: content;
+				}
+			}
+			#ds-mall {
+				display: grid;
+				grid-template-areas: ". . title"
+                    ". content image";
+				grid-template-columns: auto 40% 50%;
+				#mall {
+					grid-area: title;
+				}
+				#img-mall {
+					grid-area: image;
+				}
+				#mall-content {
+					grid-area: content;
+				}
+			}
+		}
+		@include xl {
+			display: grid;
+			grid-template-areas: ". sub2 ."
+                ". outlet ."
+                ". mall .";
+			grid-template-columns: auto 1200px auto;
+			#ds-sub2 {
+				grid-area: sub2;
+			}
+			#ds-outlet {
+				grid-area: outlet;
+			}
+			#ds-mall {
+				grid-area: mall;
+			}
+		}
+	}
+	>article {
+		>h3 {
+			color: $lightblue;
+			font-size: rem-calc(60);
+			font-variation-settings: "wght"300;
+			line-height: .8;
+			padding: 32px 0px 16px;
+			text-align: center;
+		}
+		#business-button-flex {
+			display: flex;
+			justify-content: center;
+			>button {
+				margin: 16px 0px 48px 0px;
+			}
+		}
+	}
+}

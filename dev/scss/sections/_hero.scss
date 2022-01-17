@@ -1,0 +1,57 @@
+#hero {
+	padding-top: 210px;
+	@include md {
+		padding-top: 160px;
+	}
+	a {
+		text-decoration: none;
+		#hero-image {
+			background-image: url("../img/hero/hero.jpg");
+			background-position: bottom left;
+			background-size: cover;
+			display: flex;
+			flex-direction: column;
+			height: 360px;
+			justify-content: space-between;
+			@include md {
+				height: 785px;
+			}
+			@include lg {
+				height: 1200px;
+			}
+			>h1 {
+				color: $darkblue;
+				font-size: rem-calc(60);
+				font-variation-settings: "wght"300;
+				line-height: .8;
+				padding: 16px;
+				@include md {
+					font-size: rem-calc(150);
+					font-variation-settings: "wght"200;
+					padding: 24px 16px;
+				}
+				@include lg {
+					font-size: rem-calc(200);
+					font-variation-settings: "wght"200;
+					padding: 24px 16px;
+				}
+			}
+			>div {
+				align-self: center;
+				i {
+					color: $white;
+					font-size: rem-calc(100);
+					padding: 16px;
+					text-decoration: none;
+					transition: 0.25s;
+					&:hover {
+						color: $darkblue;
+					}
+					@include md {
+						font-size: rem-calc(150);
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,137 @@
+/* =============
+    Header
+============= */
+header {
+	background-color: $darkblue;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	#navigation-header {
+		display: grid;
+		grid-template-areas: "survival burger"
+            "nav nav";
+		grid-template-columns: 90% auto;
+		padding-left: 16px;
+		padding-top: 32px;
+		@include lg {
+			grid-template-areas: "survival nav";
+			grid-template-columns: 35% auto;
+			padding-right: 16px;
+		}
+		@include xl {
+			grid-template-areas: "survival nav";
+			grid-template-columns: 40% auto;
+		}
+		#logo-container {
+			grid-area: survival;
+			button {
+				background-color: $lightblue;
+				color: $darkblue;
+				display: inline-block;
+				font-size: rem-calc(18);
+				padding: 10px 20px;
+				transition: 0.25s;
+				&:hover {
+					background-color: $darkblue;
+					border: 1px solid $lightblue;
+					color: $lightblue;
+				}
+			}
+		}
+		#burger-container {
+			grid-area: burger;
+			@include lg {
+				display: none !important;
+			}
+			i {
+				color: $lightgreen;
+				cursor: pointer;
+				font-size: rem-calc(50);
+			}
+		}
+		#nav-container {
+			background-color: $darkblue;
+			display: none;
+			grid-area: nav;
+			padding: 20px 10px 10px;
+			@include lg {
+				background-color: $darkblue;
+				display: block !important;
+			}
+		}
+	}
+	#search-md-flex {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding-top: 100px;
+		@include lg {
+			padding-top: 100px;
+		}
+	}
+	#search-flex {
+		display: flex;
+		justify-content: center;
+		#search-bar {
+			background-color: $white;
+			border: 4px $green solid;
+			border-radius: 40px;
+			margin: 10px;
+			width: 90%;
+			>form {
+				padding: 5px;
+				>i {
+					color: $green;
+					font-size: rem-calc(24);
+				}
+				>input {
+					background-color: transparent;
+					border: none;
+					border-radius: 0px;
+					color: $green;
+					font-size: rem-calc(24);
+					font-variation-settings: "wght"600;
+					font-weight: 300;
+					&::placeholder {
+						color: $green;
+					}
+					&:-ms-input-placeholder {
+						color: $green;
+					}
+					&::-ms-input-placeholder {
+						color: $green;
+					}
+				}
+			}
+		}
+	}
+	#header-button {
+		display: flex;
+		justify-content: center;
+		>button {
+			border-radius: 0px;
+			flex-grow: 1;
+		}
+	}
+	@include md {
+		#search-md-flex {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			#header-button {
+				flex-grow: .2;
+				order: 1;
+				padding-left: 16px;
+				>button {
+					border-radius: 20px;
+					margin-bottom: 10px;
+				}
+			}
+			#search-flex {
+				flex-grow: .2;
+				order: 2;
+			}
+		}
+	}
+}

@@ -1,0 +1,35 @@
+/* =============
+    Navigation
+============= */
+#nav-container {
+	ul {
+		height: 100%;
+		@include lg {
+			display: flex;
+			justify-content: space-between;
+		}
+		li {
+			margin-bottom: 20px;
+			text-align: right;
+			@include lg {
+				align-items: center;
+				display: flex;
+				margin-bottom: 0px;
+			}
+			a:link,
+            a:visited {
+				color: $lightgreen;
+				padding: 0px 0px;
+				text-decoration: none;
+				transition: 0.25s;
+				@include lg {
+					color: $lightgreen;
+				}
+				&:hover,
+                &:active {
+					color: $green;
+				}
+			}
+		}
+	}
+}

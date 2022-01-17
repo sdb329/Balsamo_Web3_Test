@@ -1,0 +1,413 @@
+#places-to-visit {
+
+    aside {
+        display: none;
+
+        @include md {
+            display: list-item;
+        }
+    }
+
+    .v-img-ht {
+        height: 114px;
+
+        @include md {
+            height: 380px;
+        }
+
+        @include lg {
+            height: 380px;
+        }
+
+
+    }
+
+    #v-img-1 {
+        background-image: url("../img/places-to-visit/place1.jpg");
+        background-position: center;
+        background-size: cover;
+
+    }
+
+    #v-img-2 {
+        background-image: url("../img/places-to-visit/place2.jpg");
+        background-position: center;
+        background-size: cover;
+
+    }
+
+    #v-img-3 {
+        background-image: url("../img/places-to-visit/place3.jpg");
+        background-position: center;
+        background-size: cover;
+
+    }
+
+    >section {
+        @include xl {
+            display: grid;
+            grid-template-columns: auto 1200px auto;
+            grid-template-areas: ". contain-visitplaces ."
+        }
+
+        ul {
+            @include xl {
+                grid-area: contain-visitplaces;
+
+            }
+
+            #visit-title {
+
+                >div {
+                    >h1 {
+                        line-height: .8;
+                        text-align: center;
+                        font-variation-settings: "wght"600;
+                        font-size: rem-calc(50);
+                        color: $darkblue;
+
+                        padding-bottom: 16px;
+
+
+                        @include md {
+                            font-size: rem-calc(100);
+                            padding-bottom: 16pt;
+                        }
+                    }
+
+                    >h2 {
+                        line-height: .8;
+                        text-align: center;
+                        font-variation-settings: "wght"300;
+                        font-size: rem-calc(40);
+                        color: $darkblue;
+
+
+                        @include md {
+                            font-size: rem-calc(72);
+                        }
+                    }
+                }
+            }
+
+            #visit-1 {
+
+                padding: 32px 0px;
+                display: grid;
+                grid-template-columns: 20% 70%;
+                grid-template-areas:
+                    "nb content"
+                    "nb button";
+
+                #no-1 {
+
+                    grid-area: nb;
+                    text-align: center;
+                    font-variation-settings: "wght"600;
+                    font-size: rem-calc(150);
+                    color: $greenblue;
+                    line-height: .8;
+
+                }
+
+                #v-content-1 {
+                    grid-area: content;
+
+
+                    line-height: .8;
+                    font-variation-settings: "wght"300;
+                    font-size: rem-calc(50);
+                    color: $greenblue;
+
+                    >h2 {
+                        margin-bottom: 10px;
+                    }
+                }
+
+                #v-button-1 {
+                    margin-top: 16px;
+                    grid-area: button;
+
+                    @include md {
+                        display: none;
+                    }
+                }
+            }
+
+
+            #visit-2 {
+                padding: 32px 0px;
+                display: grid;
+                grid-template-columns: 20% 70%;
+                grid-template-areas:
+                    "nb content"
+                    "nb button";
+
+                #no-2 {
+                    grid-area: nb;
+
+
+                    text-align: center;
+                    font-variation-settings: "wght"600;
+                    font-size: rem-calc(150);
+                    color: $greenblue;
+                    line-height: .8;
+                }
+
+                #v-content-2 {
+                    grid-area: content;
+
+                    line-height: .8;
+                    font-variation-settings: "wght"300;
+                    font-size: rem-calc(50);
+                    color: $greenblue;
+
+                    >h2 {
+                        margin-bottom: 10px;
+                    }
+                }
+
+                #v-button-2 {
+                    margin-top: 16px;
+                    grid-area: button;
+
+                    @include md {
+                        display: none;
+                    }
+                }
+            }
+
+            #visit-3 {
+                padding: 32px 0px;
+                display: grid;
+                grid-template-columns: 20% 70%;
+                grid-template-areas:
+                    "nb content"
+                    "nb button";
+
+                #no-3 {
+                    grid-area: nb;
+
+                    text-align: center;
+                    font-variation-settings: "wght"600;
+                    font-size: rem-calc(150);
+                    color: $greenblue;
+                    line-height: .8;
+                }
+
+                #v-content-3 {
+                    grid-area: content;
+
+                    line-height: .8;
+                    font-variation-settings: "wght"300;
+                    font-size: rem-calc(50);
+                    color: $greenblue;
+
+                    >h2 {
+                        margin-bottom: 10px;
+                    }
+                }
+
+                #v-button-3 {
+                    margin-top: 16px;
+                    grid-area: button;
+
+                    @include md {
+                        display: none;
+                    }
+                }
+            }
+
+            @include md {
+
+                #visit-1 {
+                    padding: 32px 0px;
+                    display: grid;
+                    grid-template-columns: 30px 20% auto 150px;
+                    grid-template-areas:
+                        ". nb content ."
+                        ". nb button .";
+
+                    #no-1 {
+                        grid-area: nb;
+                        font-size: rem-calc(250);
+                        padding-left: 16px;
+                    }
+
+                    #v-content-1 {
+                        >h2 {
+                            padding-bottom: 16px;
+                        }
+
+                        grid-area: content;
+                        padding: 45px 16px 0px 16px;
+                    }
+
+                    >aside {
+                        grid-area: button;
+
+                        font-variation-settings: "wght"400;
+                        font-size: rem-calc(16);
+                        color: $darkblue;
+                        line-height: 1.5;
+                        padding-left: 16px;
+                    }
+                }
+
+                #visit-2 {
+                    padding: 32px 0px;
+                    display: grid;
+                    grid-template-columns: 30px 20% auto 150px;
+                    grid-template-areas:
+                        ". nb content ."
+                        ". nb button .";
+
+                    #no-2 {
+                        grid-area: nb;
+                        font-size: rem-calc(250);
+
+                    }
+
+                    #v-content-2 {
+
+                        >h2 {
+                            padding-bottom: 16px;
+                        }
+
+                        grid-area: content;
+                        padding: 45px 16px 0px 16px;
+                    }
+
+                    >aside {
+                        grid-area: button;
+
+                        font-variation-settings: "wght"400;
+                        font-size: rem-calc(16);
+                        color: $darkblue;
+                        line-height: 1.5;
+                        padding-left: 16px;
+                    }
+                }
+
+                #visit-3 {
+                    padding: 32px 0px;
+                    display: grid;
+                    grid-template-columns: 30px 20% auto 150px;
+                    grid-template-areas:
+                        ". nb content ."
+                        ". nb button .";
+
+                    #no-3 {
+                        grid-area: nb;
+                        font-size: rem-calc(250);
+                    }
+
+                    #v-content-3 {
+                        >h2 {
+                            padding-bottom: 16px;
+                        }
+
+                        grid-area: content;
+                        padding: 45px 16px 0px 16px;
+                    }
+
+                    >aside {
+                        grid-area: button;
+
+                        font-variation-settings: "wght"400;
+                        font-size: rem-calc(16);
+                        color: $darkblue;
+                        line-height: 1.5;
+                        padding-left: 16px;
+                    }
+                }
+
+
+
+
+            }
+
+            @include lg {
+
+                #visit-1 {
+                    display: grid;
+                    grid-template-columns: auto 10% 30% 30% auto;
+                    grid-template-areas:
+                        ". nb content button .";
+
+                    #no-1 {
+                        grid-area: nb;
+                    }
+
+                    #v-content-1 {
+                        grid-area: content;
+                    }
+
+                    >aside {
+                        grid-area: button;
+                        display: flex;
+                        margin-top: auto;
+                        text-align: justify;
+                        padding-left: 0px;
+                        margin-bottom: -7px;
+
+                    }
+                }
+
+                #visit-2 {
+                    display: grid;
+                    grid-template-columns: auto 10% 30% 30% auto;
+                    grid-template-areas:
+                        ". nb content button .";
+
+
+                    #no-2 {
+                        grid-area: nb;
+                    }
+
+                    #v-content-2 {
+                        grid-area: content;
+                    }
+
+                    >aside {
+                        grid-area: button;
+                        display: flex;
+                        margin-top: auto;
+                        text-align: justify;
+                        padding-left: 0px;
+                        margin-bottom: -7px;
+                    }
+                }
+
+                #visit-3 {
+                    display: grid;
+                    grid-template-columns: auto 10% 30% 30% auto;
+                    grid-template-areas:
+                        ". nb content button .";
+
+
+                    #no-3 {
+                        grid-area: nb;
+                    }
+
+                    #v-content-3 {
+                        grid-area: content;
+                    }
+
+                    >aside {
+                        grid-area: button;
+                        display: flex;
+                        margin-top: auto;
+                        text-align: justify;
+                        padding-left: 0px;
+                        margin-bottom: -7px;
+                    }
+                }
+
+
+
+
+            }
+        }
+    }
+}

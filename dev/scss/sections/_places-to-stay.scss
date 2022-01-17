@@ -1,0 +1,201 @@
+#places-to-stay {
+	.pts-img-ht {
+		align-items: flex-end;
+		display: flex;
+		height: 220px;
+		justify-content: center;
+		@include md {
+			height: 439px;
+		}
+		@include lg {
+			height: 940px;
+		}
+		h2 {
+			color: white;
+		}
+	}
+	#pts-img1 {
+		background-image: url("../img/places-to-stay/stay1.jpg");
+		background-position: center;
+		background-size: cover;
+	}
+	#pts-img2 {
+		background-image: url("../img/places-to-stay/stay2.jpg");
+		background-position: center;
+		background-size: cover;
+	}
+	#pts-img3 {
+		background-image: url("../img/places-to-stay/stay3.jpg");
+		background-position: center;
+		background-size: cover;
+	}
+	#pts-img4 {
+		background-image: url("../img/places-to-stay/stay4.jpg");
+		background-position: center;
+		background-size: cover;
+	}
+	@include xl {
+		display: grid;
+		grid-template-areas: ". content .";
+		grid-template-columns: auto 1200px auto;
+	}
+	ul {
+		display: grid;
+		grid-area: content;
+		grid-template-areas: ". title ."
+        ". c1 ."
+        ". c2 ."
+        ". c3 ."
+        ". c4 .";
+		grid-template-columns: 16px auto 16px;
+		>li {
+			.pts-button {
+				display: flex;
+				justify-content: center;
+				margin-top: 16px;
+				text-align: flex-end;
+				>button {
+					border: none;
+					border-radius: 5px;
+					display: flex;
+				}
+			}
+		}
+		#pts-title {
+			grid-area: title;
+			line-height: .8;
+			padding-top: 48px;
+			text-align: center;
+			>h1 {
+				color: $darkblue;
+				font-size: rem-calc(50);
+				font-variation-settings: "wght"600;
+				@include lg {
+					font-size: rem-calc(100);
+					padding-bottom: 32px;
+					padding-top: 72px;
+				}
+			}
+		}
+		#pts-content1 {
+			grid-area: c1;
+			>div {
+				>h2 {
+					color: $lightblue;
+					font-size: rem-calc(40);
+					font-variation-settings: "wght"300;
+					line-height: .8;
+					padding-bottom: 16px;
+					text-align: center;
+					@include md {
+						font-size: rem-calc(72);
+						padding-bottom: 32px;
+					}
+				}
+			}
+		}
+		#pts-content2 {
+			grid-area: c2;
+			>div {
+				>h2 {
+					color: $lightblue;
+					font-size: rem-calc(40);
+					font-variation-settings: "wght"300;
+					line-height: .8;
+					padding-bottom: 16px;
+					text-align: center;
+					@include md {
+						font-size: rem-calc(72);
+						padding-bottom: 32px;
+					}
+				}
+			}
+		}
+		#pts-content3 {
+			grid-area: c3;
+			>div {
+				>h2 {
+					color: $lightblue;
+					font-size: rem-calc(40);
+					font-variation-settings: "wght"300;
+					line-height: .8;
+					padding-bottom: 16px;
+					text-align: center;
+					@include md {
+						font-size: rem-calc(72);
+						padding-bottom: 32px;
+					}
+				}
+			}
+		}
+		#pts-content4 {
+			grid-area: c4;
+			>div {
+				>h2 {
+					color: $lightblue;
+					font-size: rem-calc(40);
+					font-variation-settings: "wght"300;
+					line-height: .8;
+					padding-bottom: 16px;
+					text-align: center;
+					@include md {
+						font-size: rem-calc(72);
+						padding-bottom: 32px;
+					}
+				}
+			}
+		}
+		@include lg {
+			display: grid;
+			grid-template-areas: "title title"
+                "c1 c2"
+                "c3 c4";
+			grid-template-columns: 50% auto;
+			#pts-title {
+				grid-area: title;
+			}
+			#pts-content1 {
+				grid-area: c1;
+			}
+			#pts-content2 {
+				grid-area: c2;
+			}
+			#pts-content3 {
+				grid-area: c3;
+			}
+			#pts-content4 {
+				grid-area: c4;
+			}
+		}
+		li {
+			.pts-par {
+				display: none;
+				@include md {
+					color: $darkblue;
+					display: list-item;
+					font-size: rem-calc(24);
+					font-variation-settings: "wght"400;
+					line-height: 1.5;
+					padding: 32px 100px;
+					text-align: justify;
+				}
+				@include lg {
+					font-size: rem-calc(24);
+					padding: 32px 0px;
+				}
+			}
+		}
+		.pts-padding {
+			padding: 24px 0px 32px;
+			@include md {
+				padding: 32px 0px 48px;
+			}
+			@include lg {
+				padding: 24px 18px 72px;
+			}
+			@include xl {
+				padding: 24px 18px 104px;
+			}
+		}
+	}
+}
