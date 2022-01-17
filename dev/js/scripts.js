@@ -19,12 +19,11 @@
 // })
 
 
-
-import { scrollAnimation } from "./scrollAnimation"
+import { usingScroll } from "./scrollAnimation"
 
 window.addEventListener('load', function(){
 
-    scrollAnimation()
+    usingScroll()
     
 });
 
