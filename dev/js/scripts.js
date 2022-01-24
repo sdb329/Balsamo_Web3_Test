@@ -18,16 +18,24 @@
 //     }
 // })
 
+// import { gsap } from "gsap";
+// import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
+// gsap.registerPlugin(DrawSVGPlugin);
+
 
 
 import { scrollAnimation, scrollAnimation2, scrollAnimationButton1 } from "./scrollAnimation"
 
-// import { burgerTL } from "./burgerAnimation"
+import { burgerTL } from "./burgerAnimation"
 
 var burgerButton = document.querySelector("#burger-container");
 
 burgerButton.addEventListener("click", function(){
     console.log("burger clicked");
+
+    burgerTL.play();
+
+    
 });
 
 window.addEventListener('load', function(){
