@@ -22,8 +22,25 @@
 
 import { scrollAnimation, scrollAnimation2, scrollAnimationButton1 } from "./scrollAnimation"
 
+// import { burgerTL } from "./burgerAnimation"
+
+var burgerButton = document.querySelector("#burger-container");
+
+burgerButton.addEventListener("click", function(){
+    console.log("burger clicked");
+});
+
 window.addEventListener('load', function(){
     // let regionElements = ["#region-1, #region-2, #region-3, #region-4, #region-5, #region-6,"];
+
+
+
+
+
+
+
+
+
 
     scrollAnimation("#region-1", "#region-1");
 
