@@ -433,11 +433,22 @@ button:hover {
 ============= */
 #nav-container ul {
   height: 100%;
+  width: 100%;
+  display: flex;
+  line-height: 30px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  #nav-container ul {
+    line-height: 75px;
+  }
 }
 @media (min-width: 1024px) {
   #nav-container ul {
-    display: flex;
     justify-content: space-between;
+    flex-direction: row;
   }
 }
 #nav-container ul li {
@@ -451,23 +462,21 @@ button:hover {
     margin-bottom: 0px;
   }
 }
-#nav-container ul li a:link,
-#nav-container ul li a:visited {
+#nav-container ul li button {
+  background-color: transparent;
   color: #C8F8D6;
   padding: 0px 0px;
   text-decoration: none;
   transition: 0.25s;
+  font-size: 3.125rem;
+  font-family: "Karla", sans-serif;
+  cursor: pointer;
 }
 @media (min-width: 1024px) {
-  #nav-container ul li a:link,
-#nav-container ul li a:visited {
+  #nav-container ul li button {
     color: #C8F8D6;
+    font-size: 1.0625rem;
   }
-}
-#nav-container ul li a:link:hover, #nav-container ul li a:link:active,
-#nav-container ul li a:visited:hover,
-#nav-container ul li a:visited:active {
-  color: #0A7A2A;
 }
 
 /* =============
@@ -518,6 +527,7 @@ header #navigation-header #logo-container button:hover {
 }
 header #navigation-header #burger-container {
   grid-area: burger;
+  z-index: 5000;
   background-color: #15344F;
 }
 @media (min-width: 1024px) {
@@ -534,11 +544,14 @@ header #navigation-header #nav-container {
   background-color: #15344F;
   position: fixed;
   grid-area: nav;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   z-index: 0;
 }
 @media (min-width: 1024px) {
   header #navigation-header #nav-container {
+    width: 100%;
+    height: fit-content;
     background-color: #15344F;
     position: static;
     z-index: 7000;

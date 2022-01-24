@@ -4,9 +4,20 @@
 #nav-container {
 	ul {
 		height: 100%;
+		width: 100%;
+		display: flex;
+		line-height: 30px;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+
+		@include md {
+		
+		line-height: 75px;
+		}
 		@include lg {
-			display: flex;
 			justify-content: space-between;
+			flex-direction: row;
 		}
 		li {
 			margin-bottom: 20px;
@@ -16,20 +27,40 @@
 				display: flex;
 				margin-bottom: 0px;
 			}
-			a:link,
-            a:visited {
+
+
+			button{
+				background-color: transparent;
 				color: $lightgreen;
 				padding: 0px 0px;
 				text-decoration: none;
 				transition: 0.25s;
-				@include lg {
+				font-size: rem-calc(50);
+				font-family: 'Karla', sans-serif;
+				cursor: pointer;
+
+				@include lg{
 					color: $lightgreen;
+					font-size: rem-calc(17);
 				}
-				&:hover,
-                &:active {
-					color: $green;
-				}
+
 			}
+			// a:link,
+            // a:visited {
+			// 	color: $lightgreen;
+			// 	padding: 0px 0px;
+			// 	text-decoration: none;
+			// 	transition: 0.25s;
+			// 	font-size: rem-calc(50);
+			// 	@include lg {
+			// 		color: $lightgreen;
+			// 		font-size: rem-calc(17);
+			// 	}
+			// 	&:hover,
+            //     &:active {
+			// 		color: $green;
+			// 	}
+			// }
 		}
 	}
 }

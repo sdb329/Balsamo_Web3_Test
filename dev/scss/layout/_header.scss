@@ -46,7 +46,7 @@ header {
 		}
 		#burger-container {
 			grid-area: burger;
-
+			z-index: 5000;
 		
 			background-color: $darkblue;
 			@include lg {
@@ -65,9 +65,12 @@ header {
 			position: fixed;
 			grid-area: nav;
 			// padding: 20px 10px 10px;
-			width: 100%;
+			width: 100vw;
+			height: 100vh;
 			z-index: 0;
 			@include lg {
+				width: 100%;
+				height: fit-content;
 				background-color: $darkblue;
 				// display: block !important;
 				position: static;

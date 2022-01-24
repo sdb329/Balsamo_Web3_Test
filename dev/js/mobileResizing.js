@@ -11,7 +11,11 @@ export function displayWindowSize(){
     // gsap.set("#nav-container", {y:"-=300"})
 
     if(document.documentElement.clientWidth <= 1024){
-        gsap.set("#nav-container", {y:-menuHeight, alpha:0})
+        gsap.set("#nav-container", {y:-menuHeight 
+            
+            // alpha:0
+        
+        })
     }else{
         console.log("un-hide");
         gsap.set("#nav-container",{y:0})
