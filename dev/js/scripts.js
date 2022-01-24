@@ -27,15 +27,31 @@
 import { scrollAnimation, scrollAnimation2, scrollAnimationButton1 } from "./scrollAnimation"
 
 import { burgerTL } from "./burgerAnimation"
+import { displayWindowSize } from "./mobileResizing"
+import { menuAnimation } from "./mobileMenu"
+
+
 
 var burgerButton = document.querySelector("#burger-container");
+
+let canISeeMenu = false;
+
+
 
 burgerButton.addEventListener("click", function(){
     console.log("burger clicked");
 
-    burgerTL.play();
+   
 
-    
+    if(canISeeMenu === false){
+        burgerTL.play();
+        menuAnimation.play();
+        canISeeMenu = true;
+    }else{
+        burgerTL.reverse();
+        menuAnimation.reverse();
+        canISeeMenu = false;
+    }
 });
 
 window.addEventListener('load', function(){
@@ -76,3 +92,6 @@ window.addEventListener('load', function(){
 
 });
 
+
+window.addEventListener("resize", displayWindowSize);
+window.addEventListener('load', displayWindowSize);

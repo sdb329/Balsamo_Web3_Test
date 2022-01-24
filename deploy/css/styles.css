@@ -476,6 +476,7 @@ button:hover {
 header {
   background-color: #15344F;
   left: 0;
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
@@ -484,7 +485,6 @@ header #navigation-header {
   display: grid;
   grid-template-areas: "survival burger" "nav nav";
   grid-template-columns: 90% auto;
-  padding-left: 16px;
   padding-top: 32px;
 }
 @media (min-width: 1024px) {
@@ -518,6 +518,7 @@ header #navigation-header #logo-container button:hover {
 }
 header #navigation-header #burger-container {
   grid-area: burger;
+  background-color: #15344F;
 }
 @media (min-width: 1024px) {
   header #navigation-header #burger-container {
@@ -531,21 +532,23 @@ header #navigation-header #burger-container i {
 }
 header #navigation-header #nav-container {
   background-color: #15344F;
-  display: none;
+  position: fixed;
   grid-area: nav;
-  padding: 20px 10px 10px;
+  width: 100%;
+  z-index: 0;
 }
 @media (min-width: 1024px) {
   header #navigation-header #nav-container {
     background-color: #15344F;
-    display: block !important;
+    position: static;
+    z-index: 7000;
   }
 }
 header #search-md-flex {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 100px;
+  padding-top: 130px;
 }
 @media (min-width: 1024px) {
   header #search-md-flex {
