@@ -768,6 +768,14 @@ header #header-button > button {
   }
 }
 
+#hero {
+  padding-top: 240px;
+}
+@media (min-width: 768px) {
+  #hero {
+    padding-top: 170px;
+  }
+}
 #hero a {
   text-decoration: none;
 }
