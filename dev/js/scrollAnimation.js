@@ -49,7 +49,7 @@ export function scrollAnimation2(animationElement, triggerElement){
         {
                 // duration: 6,
                 alpha: 1,
-                x: "-=60",
+                x: "-=20",
        
                 scrollTrigger: {
                     trigger: triggerElement,
