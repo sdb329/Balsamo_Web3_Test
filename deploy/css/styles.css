@@ -492,25 +492,31 @@ header {
 }
 header #navigation-header {
   display: grid;
-  grid-template-areas: "survival burger" "nav nav";
-  grid-template-columns: 90% auto;
+  grid-template-areas: "survival search burger" "nav nav nav";
+  grid-template-columns: auto 40% 15%;
   padding-top: 32px;
+}
+@media (min-width: 768px) {
+  header #navigation-header {
+    grid-template-columns: 30% auto 100px;
+  }
 }
 @media (min-width: 1024px) {
   header #navigation-header {
-    grid-template-areas: "survival nav";
-    grid-template-columns: 35% auto;
+    grid-template-areas: "survival search  nav";
+    grid-template-columns: 25% 15% auto;
     padding-right: 16px;
   }
 }
 @media (min-width: 1200px) {
   header #navigation-header {
-    grid-template-areas: "survival nav";
-    grid-template-columns: 40% auto;
+    grid-template-areas: "survival search nav";
+    grid-template-columns: 18% 15% auto;
   }
 }
 header #navigation-header #logo-container {
   grid-area: survival;
+  padding-left: 16px;
 }
 header #navigation-header #logo-container button {
   background-color: #B3ECFF;
@@ -525,17 +531,21 @@ header #navigation-header #logo-container button:hover {
   border: 1px solid #B3ECFF;
   color: #B3ECFF;
 }
+header #navigation-header #search-md-flex {
+  grid-area: search;
+}
 header #navigation-header #burger-container {
   grid-area: burger;
   z-index: 5000;
   background-color: #15344F;
+  padding-right: 16px;
 }
 @media (min-width: 1024px) {
   header #navigation-header #burger-container {
     display: none !important;
   }
 }
-header #navigation-header #burger-container i {
+header #navigation-header #burger-container svg {
   color: #C8F8D6;
   cursor: pointer;
   font-size: 3.125rem;
@@ -557,80 +567,46 @@ header #navigation-header #nav-container {
     z-index: 7000;
   }
 }
-header #search-md-flex {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-top: 130px;
-}
-@media (min-width: 1024px) {
-  header #search-md-flex {
-    padding-top: 100px;
-  }
-}
 header #search-flex {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+header #search-flex .search-flex-center {
+  color: transparent;
 }
 header #search-flex #search-bar {
-  background-color: #fff;
-  border: 4px #0A7A2A solid;
+  background-color: transparent;
+  border: 1px #B3ECFF solid;
   border-radius: 40px;
-  margin: 10px;
   width: 90%;
 }
 header #search-flex #search-bar > form {
-  padding: 5px;
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: flex;
 }
 header #search-flex #search-bar > form > i {
-  color: #0A7A2A;
+  color: #B3ECFF;
   font-size: 1.5rem;
 }
 header #search-flex #search-bar > form > input {
   background-color: transparent;
   border: none;
+  text-decoration: none;
   border-radius: 0px;
-  color: #0A7A2A;
-  font-size: 1.5rem;
+  color: #B3ECFF;
   font-variation-settings: "wght" 600;
   font-weight: 300;
 }
 header #search-flex #search-bar > form > input::placeholder {
-  color: #0A7A2A;
+  color: white;
 }
 header #search-flex #search-bar > form > input:-ms-input-placeholder {
-  color: #0A7A2A;
-}
-header #search-flex #search-bar > form > input::-ms-input-placeholder {
-  color: #0A7A2A;
-}
-header #header-button {
-  display: flex;
-  justify-content: center;
-}
-header #header-button > button {
-  border-radius: 0px;
-  flex-grow: 1;
-}
-@media (min-width: 768px) {
-  header #search-md-flex {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  header #search-md-flex #header-button {
-    flex-grow: 0.2;
-    order: 1;
-    padding-left: 16px;
-  }
-  header #search-md-flex #header-button > button {
-    border-radius: 20px;
-    margin-bottom: 10px;
-  }
-  header #search-md-flex #search-flex {
-    flex-grow: 0.2;
-    order: 2;
-  }
+  color: #B3ECFF;
+  font-size: 1.5rem;
 }
 
 /* =============
@@ -769,11 +745,11 @@ header #header-button > button {
 }
 
 #hero {
-  padding-top: 240px;
+  padding-top: 110px;
 }
 @media (min-width: 768px) {
   #hero {
-    padding-top: 170px;
+    padding-top: 120px;
   }
 }
 #hero a {

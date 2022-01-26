@@ -31,6 +31,9 @@ import { displayWindowSize } from "./mobileResizing"
 import { menuAnimation } from "./mobileMenu"
 import { scrollPage } from "./pageScroll"
 
+
+
+
 var burgerButton = document.querySelector("#burger-container");
 
 let canISeeMenu = false;
@@ -68,9 +71,11 @@ for(let i = 0; i < navButtons.length; i++){
 
 function checkScrolling(e) {
 
+
+    console.log("working")
     const indexValue = [].indexOf.call(navButtons, e.target)
     if (indexValue != -1) {
-        scrollPage(indexValue);
+        scrollPage(indexValue - 1);
     }
 }
 
