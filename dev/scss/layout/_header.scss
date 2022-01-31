@@ -78,18 +78,26 @@ header {
 				font-size: rem-calc(50);
 			}
 		}
-		#nav-container {
+		// #flex-nav-box{
 
+		// 	width: 100vw;
+		// 	height: 60vh;			
+		// 	background-color: $lightblue;
+		// 	z-index: 0;
+		// }
+		#nav-container {
+		
 
 		
 			background-color: $darkblue;
 			// display: none;
 			// padding-right: 16px;
 			position: fixed;
+			right: -10px;
 			grid-area: nav;
 			// padding: 20px 10px 10px;
-			width: 100vw;
-			height: 100vh;
+			width: 70vw;
+			height: 70vh;
 			z-index: 0;
 			@include lg {
 				width: 100%;

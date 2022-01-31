@@ -553,9 +553,10 @@ header #navigation-header #burger-container svg {
 header #navigation-header #nav-container {
   background-color: #15344F;
   position: fixed;
+  right: -10px;
   grid-area: nav;
-  width: 100vw;
-  height: 100vh;
+  width: 70vw;
+  height: 70vh;
   z-index: 0;
 }
 @media (min-width: 1024px) {

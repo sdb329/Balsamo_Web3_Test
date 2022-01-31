@@ -26,7 +26,7 @@
 
 import { scrollAnimation, scrollAnimation2, scrollAnimationButton1 } from "./scrollAnimation"
 
-import { burgerTL } from "./burgerAnimation"
+import { burgerTL, burgerTL2 } from "./burgerAnimation"
 import { displayWindowSize } from "./mobileResizing"
 import { menuAnimation } from "./mobileMenu"
 import { scrollPage } from "./pageScroll"
@@ -44,6 +44,7 @@ function openCloseMenu(){
     
     if(canISeeMenu === false){
         burgerTL.play();
+        burgerTL2.play();
         menuAnimation.play();
         canISeeMenu = true;
     }else{
