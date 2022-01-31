@@ -2,13 +2,15 @@
     Navigation
 ============= */
 #nav-container {
+
+	
 	ul {
 		height: 100%;
 		width: 100%;
 		display: flex;
 		line-height: 30px;
 		justify-content: center;
-		align-items: center;
+		// align-items: center;
 		flex-direction: column;
 
 		@include md {
@@ -22,6 +24,8 @@
 		li {
 			margin-bottom: 20px;
 			text-align: right;
+			align-self: flex-end;
+		
 			@include lg {
 				align-items: center;
 				display: flex;
@@ -30,21 +34,90 @@
 
 
 			button{
+				padding-right: 100px;
 				background-color: transparent;
-				color: $lightgreen;
-				padding: 0px 0px;
+				color: $lightblue;
+				// padding: 0px 0px;
 				text-decoration: none;
-				transition: 0.25s;
-				font-size: rem-calc(50);
+				z-index: 1;
+				
+				
+				font-size: rem-calc(30);
 				font-family: 'Karla', sans-serif;
 				cursor: pointer;
+				border-radius: 0px;
+
+				// &:before {
+				// 	content: '';
+				// 	position: absolute;
+				// 	top: 0;
+				// 	left: 0;
+				// 	bottom: 0;
+				// 	right: 0;
+				// 	z-index: -1;
+				// 	background-color: $lightgreen;
+				// 	transition: transform 0.25s ease-in-out;
+				// 	transform-origin: right;
+				// 	transform: scaleX(0) ;}
+
+
+				&:hover {
+					background-color: $lightblue;
+					background-position: 0px 150px;
+					color: $darkblue;
+					font-size: rem-calc(40);
+					width: 70vw;
+					padding-top: 10vh;
+					padding-bottom: 10vh;
+					// z-index: 1;
+					// transform: scaleX(1)
+				}
 
 				@include lg{
 					color: $lightgreen;
 					font-size: rem-calc(17);
+					padding: 0px;
+
+					&:hover {
+						background-color: $green-button;
+						bottom: 0;
+						left: 0;
+						width: fit-content;
+						// padding: 5px;
+						padding-top: 0px;
+						padding-bottom: 0px;
+						font-size: rem-calc(17);
+	
+					}
+			
 				}
 
 			}
+			
+
+			
+
+			// button {
+			// 	background-color: $green;
+			// 	border: none;
+			// 	border-radius: 10px;
+			// 	color: $lightblue;
+			// 	cursor: pointer;
+			// 	font-size: rem-calc(24);
+			// 	font-variation-settings: "wght"600;
+			// 	font-weight: 600;
+			// 	padding: 10px;
+			// 	transition: 0.25s;
+			// 	&:hover {
+			// 		background-color: $green-button;
+			// 	}
+			// 	@include md {
+			// 		font-size: rem-calc(24);
+			// 		padding: 10px 40px;
+			// 	}
+			// }
+
+
 			// a:link,
             // a:visited {
 			// 	color: $lightgreen;
@@ -64,5 +137,3 @@
 		}
 	}
 }
-
-

@@ -437,7 +437,6 @@ button:hover {
   display: flex;
   line-height: 30px;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
 }
 @media (min-width: 768px) {
@@ -454,6 +453,7 @@ button:hover {
 #nav-container ul li {
   margin-bottom: 20px;
   text-align: right;
+  align-self: flex-end;
 }
 @media (min-width: 1024px) {
   #nav-container ul li {
@@ -463,18 +463,38 @@ button:hover {
   }
 }
 #nav-container ul li button {
+  padding-right: 100px;
   background-color: transparent;
-  color: #C8F8D6;
-  padding: 0px 0px;
+  color: #B3ECFF;
   text-decoration: none;
-  transition: 0.25s;
-  font-size: 3.125rem;
+  z-index: 1;
+  font-size: 1.875rem;
   font-family: "Karla", sans-serif;
   cursor: pointer;
+  border-radius: 0px;
+}
+#nav-container ul li button:hover {
+  background-color: #B3ECFF;
+  background-position: 0px 150px;
+  color: #15344F;
+  font-size: 2.5rem;
+  width: 70vw;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
 }
 @media (min-width: 1024px) {
   #nav-container ul li button {
     color: #C8F8D6;
+    font-size: 1.0625rem;
+    padding: 0px;
+  }
+  #nav-container ul li button:hover {
+    background-color: #23AC4A;
+    bottom: 0;
+    left: 0;
+    width: fit-content;
+    padding-top: 0px;
+    padding-bottom: 0px;
     font-size: 1.0625rem;
   }
 }
@@ -554,6 +574,7 @@ header #navigation-header #nav-container {
   background-color: #15344F;
   position: fixed;
   right: -10px;
+  top: 106px;
   grid-area: nav;
   width: 70vw;
   height: 70vh;

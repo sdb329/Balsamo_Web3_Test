@@ -16,11 +16,11 @@ export function displayWindowSize(){
             alpha:0
         
         })
-        gsap.set("#nav-btns", {x:menuHeight,
+        // gsap.set(".nav-btns", {x:menuHeight,
             
-            alpha:0
+        //     alpha:0
         
-        })
+        // })
 
     
     }else{
