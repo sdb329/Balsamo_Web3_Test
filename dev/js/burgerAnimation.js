@@ -16,13 +16,6 @@ const bottomTL = new gsap.timeline();
 bottomTL.to(".burger-lines:nth-child(2)",{duration:0.25, drawSVG: "80% 100%"})
 .to(".burger-lines:nth-child(2)",{duration:0.25});
 
-
-
-
-
-
-
-
 export const burgerTL = new gsap.timeline({paused:true});
 
 burgerTL.add(topTL,"burger")
