@@ -16,15 +16,20 @@ export function displayWindowSize(){
             alpha:0
         
         })
-        // gsap.set(".nav-btns", {x:menuHeight,
+        gsap.set(".stagger-in-nav", {
             
-        //     alpha:0
+            alpha:0
         
-        // })
+        })
 
     
     }else{
         console.log("un-hide");
-        gsap.set("#nav-container",{x:0})
+        gsap.set("#nav-container",{x:0,
+        alpha:1})
+
+        gsap.set(".stagger-in-nav", {
+            alpha:1
+        })
     }
 }

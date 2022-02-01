@@ -5,7 +5,6 @@ gsap.registerPlugin(DrawSVGPlugin);
 gsap.set(".burger-lines",{transformOrigin:"center"});
 gsap.set("#top",{drawSVG: "0% 37%"});
 gsap.set("#bottom",{drawSVG: "0% 37%"});
-gsap.set("#outline",{drawSVG: "0%"});
 
 const topTL = new gsap.timeline();
 topTL
@@ -17,57 +16,48 @@ const bottomTL = new gsap.timeline();
 bottomTL.to(".burger-lines:nth-child(2)",{duration:0.25, drawSVG: "80% 100%"})
 .to(".burger-lines:nth-child(2)",{duration:0.25});
 
-// const shuffleTL = new gsap.timeline({repeat: 5});
-// shuffleTL
-// .fromTo(".burger-lines", {
 
-//     duration: .5,
-//     x: "-=25",
-//     ease: "power4"
-// }, {
-//     duration: .5,
-//       x: "+=25",
-//   ease: "power1"
 
-// });
 
-// const middleTL = new gsap.timeline();
-// middleTL.to(".burger-lines:nth-child(2)",{duration:0.25, scale:0})
-// .to("#outline",{duration:0.25, drawSVG:"100%", stroke:"#B3ECFF"});
+
+
+
 
 export const burgerTL = new gsap.timeline({paused:true});
 
 burgerTL.add(topTL,"burger")
     .add(bottomTL,"burger");
-    // .add(shuffleTL,"burger")
+
 
     
-    export const burgerTL2 = new gsap.timeline({paused:true});
+export const burgerJumpTL = new gsap.timeline({paused:true});
+burgerJumpTL.to(".burger-lines", {x:"12", repeat:-1, yoyo:true});
 
-    // burgerTL2
-    //     .add(shuffleTL,"burger");
+// var burgerButton = document.querySelector("#burger-container");
 
+// let canISeeMenu = false;
 
-    // tl.fromTo("#drawsvg-snowflake", {
-
-    //     duration: 2,
-    //     drawSVG: "0% 8.5%"
-    // }, {
-    //     duration: 2,
-    //     ease: "slowMiddle",
-    //     drawSVG: "90% 100%"
-    // });
-
+// function openCloseMenu(){
+    
+//     if(canISeeMenu === false){
+//         burgerJumpTL.to(".burger-lines", {x:"12", repeat:-1, yoyo:true});
+//         canISeeMenu = true;
+//     }else{
+//         burgerJumpTL.to(".burger-lines", {x:"0", repeat:0, yoyo:false});
+//         canISeeMenu = false;
+//     }
     
 
-    // tl.fromTo(".burger-lines", {
+// }
 
-    //     duration: .5,
-    //     x: "-=25",
-    //     ease: "power4"
-    // }, {
-    //     duration: .5,
-    //       x: "+=25",
-    //   ease: "power1"
+// burgerButton.addEventListener("click", openCloseMenu);
 
-    // });
+// let navButtons = document.querySelectorAll(".nav-btns");
+// console.log(navButtons);
+
+// for(let i = 0; i < navButtons.length; i++){
+//     navButtons[i].addEventListener("click", openCloseMenu);
+
+// }
+
+    

@@ -22,11 +22,9 @@
 // import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 // gsap.registerPlugin(DrawSVGPlugin);
 
-
-
 import { scrollAnimation, scrollAnimation2, scrollAnimationButton1 } from "./scrollAnimation"
 
-import { burgerTL, burgerTL2 } from "./burgerAnimation"
+import { burgerTL, burgerJumpTL } from "./burgerAnimation"
 import { displayWindowSize } from "./mobileResizing"
 import { menuAnimation } from "./mobileMenu"
 import { scrollPage } from "./pageScroll"
@@ -44,15 +42,16 @@ function openCloseMenu(){
     
     if(canISeeMenu === false){
         burgerTL.play();
-        burgerTL2.play();
+        burgerJumpTL.play()
         menuAnimation.play();
         canISeeMenu = true;
     }else{
+        burgerJumpTL.pause()
         burgerTL.reverse();
         menuAnimation.reverse();
         canISeeMenu = false;
     }
-
+    
 
 }
 
