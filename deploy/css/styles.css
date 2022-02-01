@@ -511,6 +511,7 @@ button:hover {
     bottom: 0;
     left: 0;
     width: fit-content;
+    padding-right: 0px;
     padding-top: 0px;
     padding-bottom: 0px;
     font-size: 1.0625rem;
@@ -792,7 +793,7 @@ header #search-flex #search-bar > form > input:-ms-input-placeholder {
 }
 
 #hero {
-  padding-top: 110px;
+  padding-top: 100px;
 }
 @media (min-width: 768px) {
   #hero {

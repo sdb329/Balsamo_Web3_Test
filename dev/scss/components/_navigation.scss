@@ -99,6 +99,7 @@
 					color: $lightblue;
 					font-size: rem-calc(17);
 					padding: 0px;
+					
 
 					&:hover {
 						background-color: transparent;
@@ -107,6 +108,7 @@
 						left: 0;
 						width: fit-content;
 						// padding: 5px;
+						padding-right: 0px;
 						padding-top: 0px;
 						padding-bottom: 0px;
 						font-size: rem-calc(17);
