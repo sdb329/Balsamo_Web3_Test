@@ -26,7 +26,7 @@ import { scrollAnimation, scrollAnimation2, scrollAnimationButton1 } from "./scr
 
 import { burgerTL, burgerJumpTL } from "./burgerAnimation"
 import { displayWindowSize } from "./mobileResizing"
-import { menuAnimation } from "./mobileMenu"
+import { menuAnimation, searchJumpTL} from "./mobileMenu"
 import { scrollPage } from "./pageScroll"
 
 
@@ -42,11 +42,13 @@ function openCloseMenu(){
     
     if(canISeeMenu === false){
         burgerTL.play();
-        burgerJumpTL.play()
+        burgerJumpTL.play();
+        searchJumpTL.play();
         menuAnimation.play();
         canISeeMenu = true;
     }else{
         burgerJumpTL.pause()
+        searchJumpTL.pause();
         burgerTL.reverse();
         menuAnimation.reverse();
         canISeeMenu = false;
@@ -122,6 +124,7 @@ window.addEventListener('load', function(){
     scrollAnimation("#region-6", "#region-6");
 
 
+    
 
     scrollAnimation2("#visit-1", "#visit-1");
     scrollAnimation2("#visit-2", "#visit-2");
@@ -136,5 +139,6 @@ window.addEventListener('load', function(){
 });
 
 
-window.addEventListener("resize", displayWindowSize);
+
 window.addEventListener('load', displayWindowSize);
+window.addEventListener('resize', displayWindowSize);

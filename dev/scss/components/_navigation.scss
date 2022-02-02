@@ -41,20 +41,20 @@
 
 			button{
 				padding-right: 0px;
-				background-color: transparent;
+				background-color: $darkblue;
 				color: $lightblue;
 				// padding: 0px 0px;
 				text-decoration: none;
 				z-index: 1;
-				
+				// width: 100vw;
 				
 				font-size: rem-calc(30);
 				font-family: 'Karla', sans-serif;
 				cursor: pointer;
 				border-radius: 0px;
 
-				box-shadow: inset 0 0 0 0 $lightblue;
-				transition: ease-out 0.3s;
+				// box-shadow: inset 0 0 0 0 $lightblue;
+				transition: 0.25s;
 				
 				@include md{
 					padding-right: 100px;
@@ -83,7 +83,7 @@
 					padding-bottom: 10vh;
 					text-align: center;
 
-					box-shadow: inset 70vw 0 0 0 $lightblue;
+					// box-shadow: inset 100vw 0 0 0 $lightblue;
 					// margin-left: 40vw;
 					// z-index: 1;
 					// transform: scaleX(1)

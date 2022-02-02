@@ -94,11 +94,11 @@ header {
 			// padding-right: 16px;
 			position: fixed;
 			// right: -10px;
-			top: 100px;
+			top: 90px;
 			grid-area: nav;
 			// padding: 20px 10px 10px;
 			width: 100vw;
-			height: 70vh;
+			height: 75vh;
 			z-index: 0;
 			@include md {
 				width: 70vw;
@@ -129,11 +129,11 @@ header {
 	// 	}
 	// }
 	#search-flex {
-		display: flex;
-		margin-right: 16px;
-		justify-content: center;
-		flex-direction: column;
-		align-items: center;
+		// display: flex;
+		// margin-right: 16px;
+		// justify-content: center;
+		// flex-direction: column;
+		// align-items: center;
 		.search-flex-center{
 			color: transparent;
 		}
@@ -142,21 +142,37 @@ header {
 		#search-bar {
 			// background-color: $white;
 			background-color: transparent;
-			border: 1px $lightblue solid;
-			border-radius: 40px;
+			padding-bottom: 40px;
 			// margin-left: 10px;
-			width: 90%;
-			>form {
-				padding-left: 20px;
-				padding-top: 5px;
-				padding-bottom: 5px;
+			// padding: 30px;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 
-				display: flex;
+			@include md{
+				padding-right: 180px;
+			}
+			>i {
+				color: $lightgreen;
+				font-size: rem-calc(40);
+				padding-right: 16px;
 
-				>i {
-					color: $lightblue;
-					font-size: rem-calc(24);
+				@include md{
+					padding-right: 20px;
+					font-size: rem-calc(60);
 				}
+			}
+			>form {
+				border: 1px $lightgreen solid;
+				border-radius: 40px;
+				
+				padding: 20px;
+				// display: flex;
+
+				@include md{
+					padding: 10px;
+				}				
 				>input {
 					background-color: transparent;
 					border: none;

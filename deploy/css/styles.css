@@ -466,7 +466,7 @@ button:hover {
 }
 #nav-container ul li button {
   padding-right: 0px;
-  background-color: transparent;
+  background-color: #15344F;
   color: #B3ECFF;
   text-decoration: none;
   z-index: 1;
@@ -474,8 +474,7 @@ button:hover {
   font-family: "Karla", sans-serif;
   cursor: pointer;
   border-radius: 0px;
-  box-shadow: inset 0 0 0 0 #B3ECFF;
-  transition: ease-out 0.3s;
+  transition: 0.25s;
 }
 @media (min-width: 768px) {
   #nav-container ul li button {
@@ -490,7 +489,6 @@ button:hover {
   padding-top: 10vh;
   padding-bottom: 10vh;
   text-align: center;
-  box-shadow: inset 70vw 0 0 0 #B3ECFF;
 }
 @media (min-width: 768px) {
   #nav-container ul li button:hover {
@@ -593,10 +591,10 @@ header #navigation-header #burger-container svg {
 header #navigation-header #nav-container {
   background-color: #15344F;
   position: fixed;
-  top: 100px;
+  top: 90px;
   grid-area: nav;
   width: 100vw;
-  height: 70vh;
+  height: 75vh;
   z-index: 0;
 }
 @media (min-width: 768px) {
@@ -614,31 +612,42 @@ header #navigation-header #nav-container {
     z-index: 7000;
   }
 }
-header #search-flex {
-  display: flex;
-  margin-right: 16px;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
 header #search-flex .search-flex-center {
   color: transparent;
 }
 header #search-flex #search-bar {
   background-color: transparent;
-  border: 1px #B3ECFF solid;
-  border-radius: 40px;
-  width: 90%;
+  padding-bottom: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  header #search-flex #search-bar {
+    padding-right: 180px;
+  }
+}
+header #search-flex #search-bar > i {
+  color: #C8F8D6;
+  font-size: 2.5rem;
+  padding-right: 16px;
+}
+@media (min-width: 768px) {
+  header #search-flex #search-bar > i {
+    padding-right: 20px;
+    font-size: 3.75rem;
+  }
 }
 header #search-flex #search-bar > form {
-  padding-left: 20px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  display: flex;
+  border: 1px #C8F8D6 solid;
+  border-radius: 40px;
+  padding: 20px;
 }
-header #search-flex #search-bar > form > i {
-  color: #B3ECFF;
-  font-size: 1.5rem;
+@media (min-width: 768px) {
+  header #search-flex #search-bar > form {
+    padding: 10px;
+  }
 }
 header #search-flex #search-bar > form > input {
   background-color: transparent;
