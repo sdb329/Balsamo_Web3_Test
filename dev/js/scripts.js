@@ -26,7 +26,7 @@ import { scrollAnimation, scrollAnimation2, scrollAnimationButton1 } from "./scr
 
 import { burgerTL, burgerJumpTL } from "./burgerAnimation"
 import { displayWindowSize } from "./mobileResizing"
-import { menuAnimation, searchJumpTL} from "./mobileMenu"
+import { menuAnimation} from "./mobileMenu"
 import { scrollPage } from "./pageScroll"
 
 
@@ -43,12 +43,10 @@ function openCloseMenu(){
     if(canISeeMenu === false){
         burgerTL.play();
         burgerJumpTL.play();
-        searchJumpTL.play();
         menuAnimation.play();
         canISeeMenu = true;
     }else{
         burgerJumpTL.pause()
-        searchJumpTL.pause();
         burgerTL.reverse();
         menuAnimation.reverse();
         canISeeMenu = false;
@@ -83,6 +81,37 @@ function checkScrolling(e) {
 
 
 
+
+
+
+// document.querySelector('#search-icon').addEventListener('mouseenter', entering);
+// document.querySelector('#search-icon').addEventListener('mouseleave', leaving);
+// const searchJumpTL = new gsap.timeline();
+
+
+// function entering(ev){
+    
+//     searchJumpTL.to("#search-icon", {y:"-12", yoyo:true});
+// }
+
+// function leaving(ev){
+
+//     searchJumpTL.to("#search-icon", {y:"0", yoyo:false});
+// }
+
+
+// document.queryselector('#search-icon').addEventListener('mouseenter', function(ev){
+
+//     searchJumpTL.to("#search-icon", {y:"-12", yoyo:true});
+// });
+
+// document.queryselector('#search-icon').addEventListener('mouseleave', function(ev){
+
+//     searchJumpTL.to("#search-icon", {y:"0", yoyo:false});
+// });
+
+
+
 // burgerButton.addEventListener("click", function(){
 //     console.log("burger clicked");
 
@@ -106,7 +135,7 @@ window.addEventListener('load', function(){
 
 
 
-
+  
 
 
 
