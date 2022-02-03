@@ -22,6 +22,18 @@ export function displayWindowSize(){
         
         })
 
+        gsap.set(".search-msg", {
+            
+            alpha:0,
+            x:"+=150"
+        
+        })
+        gsap.set("#search-icon", {
+            
+            x:"+=150"
+        
+        })
+
     
     }else{
         console.log("un-hide");
@@ -30,6 +42,17 @@ export function displayWindowSize(){
 
         gsap.set(".stagger-in-nav", {
             alpha:1
+        })
+        gsap.set(".search-msg", {
+            
+            alpha:1
+        
+        })
+        gsap.set("#search-icon", {
+            
+            alpha:1,
+            x:"+=0"
+        
         })
     }
 }

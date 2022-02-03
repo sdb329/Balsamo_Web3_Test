@@ -26,7 +26,7 @@ import { scrollAnimation, scrollAnimation2, scrollAnimationButton1 } from "./scr
 
 import { burgerTL, burgerJumpTL } from "./burgerAnimation"
 import { displayWindowSize } from "./mobileResizing"
-import { menuAnimation, searchJumpTL} from "./mobileMenu"
+import { menuAnimation, searchJumpTL } from "./mobileMenu"
 import { scrollPage } from "./pageScroll"
 
 
@@ -43,12 +43,12 @@ function openCloseMenu(){
     if(canISeeMenu === false){
         burgerTL.play();
         burgerJumpTL.play();
-        searchJumpTL.play();
+        // searchJumpTL.play();
         menuAnimation.play();
         canISeeMenu = true;
     }else{
         burgerJumpTL.pause()
-        searchJumpTL.pause();
+        // searchJumpTL.pause();
         burgerTL.reverse();
         menuAnimation.reverse();
         canISeeMenu = false;
@@ -63,12 +63,59 @@ let navButtons = document.querySelectorAll(".nav-btns");
 console.log(navButtons);
 
 
+let searchJumpTest = document.querySelectorAll("#search-icon")
+
+
+
+for(const glass of searchJumpTest){
+    glass.addEventListener("click", iconJump);
+    // glass.addEventListener("mouseleave", iconJumpOut);
+}
+
+
+
+
+let iconJumpingSearch = false;
+
+
+function iconJump(){
+    if(iconJumpingSearch === false){
+        console.log("this is working mouse enter")
+        searchJumpTL.play();
+        iconJumpingSearch = true;
+    }else{
+        console.log("this is working mouse leave")
+        // searchStopJumpTL.play();
+        searchJumpTL.reverse();
+        iconJumpingSearch = false;
+    }
+
+
+    
+    // searchJumpTL.reverse();
+}
+
+// function iconJumpOut(){
+
+//     console.log("this is working mouse leave")
+//     // searchStopJumpTL.play();
+//     searchJumpTL.reverse();
+   
+// }
 
 for(let i = 0; i < navButtons.length; i++){
     navButtons[i].addEventListener("click", checkScrolling);
+    // navButtons[i].addEventListener("mouseenter", iconJump);
     navButtons[i].addEventListener("click", openCloseMenu);
 
 }
+
+// for(let i = 0; i < searchJumpTest.length; i++){
+//     searchJumpTest[i].addEventListener("mouseenter", iconJump);
+//     searchJumpTest[i].addEventListener("mouseleave", iconJumpOut);
+// }
+
+
 
 
 function checkScrolling(e) {
@@ -80,6 +127,7 @@ function checkScrolling(e) {
         scrollPage(indexValue - 1);
     }
 }
+
 
 
 

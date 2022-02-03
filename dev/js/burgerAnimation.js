@@ -22,6 +22,7 @@ burgerTL.add(topTL,"burger")
     .add(bottomTL,"burger");
 
 
+
     
 export const burgerJumpTL = new gsap.timeline({paused:true});
 burgerJumpTL.to(".burger-lines", {x:"12", repeat:-1, yoyo:true});

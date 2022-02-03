@@ -94,7 +94,7 @@ header {
 			// padding-right: 16px;
 			position: fixed;
 			// right: -10px;
-			top: 90px;
+			top: 100px;
 			grid-area: nav;
 			// padding: 20px 10px 10px;
 			width: 100vw;
@@ -160,7 +160,7 @@ header {
 
 				@include md{
 					padding-right: 20px;
-					font-size: rem-calc(60);
+					font-size: rem-calc(80);
 				}
 			}
 			>form {

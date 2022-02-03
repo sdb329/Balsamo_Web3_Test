@@ -15,4 +15,12 @@ if(document.documentElement.clientWidth <="1024px"){
 
 
 export const searchJumpTL = new gsap.timeline({paused:true});
-searchJumpTL.to("#search-icon", {y:"-12", repeat:-1, yoyo:true});
+searchJumpTL.to("#search-icon", {y:"-12", repeat:2, yoyo:true})
+
+.to("#search-icon", {x:"-=150"})
+.to(".search-msg", {x:"-=150", alpha:1});
+
+
+
+// export const searchStopJumpTL = new gsap.timeline({paused:true});
+// searchStopJumpTL.to("#search-icon", {y:"0", repeat:0, yoyo:false});
