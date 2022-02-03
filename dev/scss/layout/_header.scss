@@ -26,14 +26,14 @@ header {
 		}
 
 		@include lg {
-			grid-template-areas: "survival search  nav";
-			grid-template-columns: 25% 15% auto;
+			grid-template-areas: "survival  nav";
+			grid-template-columns: 25% auto;
 			padding-right: 16px;
 			
 		}
 		@include xl {
-			grid-template-areas: "survival search nav";
-			grid-template-columns: 18% 15% auto;
+			grid-template-areas: "survival nav";
+			grid-template-columns: 18% auto;
 		}
 		#logo-container {
 			grid-area: survival;
@@ -53,16 +53,7 @@ header {
 			}
 		}
 
-		#search-md-flex {
-			grid-area: search;
-			// border: 1px solid red;
-			// @include lg {
-			// 	padding-top: 100px;
-			// }
-
-
-			
-		}
+		
 
 		#burger-container {
 			grid-area: burger;
@@ -153,6 +144,11 @@ header {
 			@include md{
 				padding-right: 180px;
 			}
+			@include lg{
+				padding-right: 0px;
+				padding-bottom: 0px;
+				padding-left: 10px;
+			}
 			>i {
 				color: $lightgreen;
 				font-size: rem-calc(40);
@@ -161,6 +157,10 @@ header {
 				@include md{
 					padding-right: 20px;
 					font-size: rem-calc(80);
+				}
+				@include lg{
+					padding-right: 20px;
+					font-size: rem-calc(30);
 				}
 			}
 			>form {
@@ -172,7 +172,11 @@ header {
 
 				@include md{
 					padding: 10px;
-				}				
+				}		
+				@include lg{
+					padding: 0px;
+					font-size: rem-calc(12);
+				}			
 				>input {
 					background-color: transparent;
 					border: none;

@@ -451,6 +451,7 @@ button:hover {
   #nav-container ul {
     justify-content: space-between;
     flex-direction: row;
+    line-height: 20px;
   }
 }
 #nav-container ul li {
@@ -541,15 +542,15 @@ header #navigation-header {
 }
 @media (min-width: 1024px) {
   header #navigation-header {
-    grid-template-areas: "survival search  nav";
-    grid-template-columns: 25% 15% auto;
+    grid-template-areas: "survival  nav";
+    grid-template-columns: 25% auto;
     padding-right: 16px;
   }
 }
 @media (min-width: 1200px) {
   header #navigation-header {
-    grid-template-areas: "survival search nav";
-    grid-template-columns: 18% 15% auto;
+    grid-template-areas: "survival nav";
+    grid-template-columns: 18% auto;
   }
 }
 header #navigation-header #logo-container {
@@ -568,9 +569,6 @@ header #navigation-header #logo-container button:hover {
   background-color: #15344F;
   border: 1px solid #B3ECFF;
   color: #B3ECFF;
-}
-header #navigation-header #search-md-flex {
-  grid-area: search;
 }
 header #navigation-header #burger-container {
   grid-area: burger;
@@ -628,6 +626,13 @@ header #search-flex #search-bar {
     padding-right: 180px;
   }
 }
+@media (min-width: 1024px) {
+  header #search-flex #search-bar {
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 10px;
+  }
+}
 header #search-flex #search-bar > i {
   color: #C8F8D6;
   font-size: 2.5rem;
@@ -639,6 +644,12 @@ header #search-flex #search-bar > i {
     font-size: 5rem;
   }
 }
+@media (min-width: 1024px) {
+  header #search-flex #search-bar > i {
+    padding-right: 20px;
+    font-size: 1.875rem;
+  }
+}
 header #search-flex #search-bar > form {
   border: 1px #C8F8D6 solid;
   border-radius: 40px;
@@ -647,6 +658,12 @@ header #search-flex #search-bar > form {
 @media (min-width: 768px) {
   header #search-flex #search-bar > form {
     padding: 10px;
+  }
+}
+@media (min-width: 1024px) {
+  header #search-flex #search-bar > form {
+    padding: 0px;
+    font-size: 0.75rem;
   }
 }
 header #search-flex #search-bar > form > input {
