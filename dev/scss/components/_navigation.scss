@@ -6,6 +6,8 @@
 
 
 	
+
+
 	ul {
 		height: 90%;
 		width: 100%;
@@ -43,7 +45,7 @@
 
 			button{
 				padding-right: 0px;
-				background-color: $darkblue;
+				background-color: transparent;
 				color: $lightblue;
 				// padding: 0px 0px;
 				text-decoration: none;
@@ -76,14 +78,15 @@
 
 
 				&:hover {
-					background-color: $lightblue;
+					// background-color: $lightblue;
 					// background-position: 0px 150px;
-					color: $darkblue;
+					// color: $darkblue;
 					font-size: rem-calc(40);
-					width: 100vw;
+					// width: 100vw;
 					padding-top: 10vh;
 					padding-bottom: 10vh;
 					text-align: center;
+					width: 100vw;
 
 					// box-shadow: inset 100vw 0 0 0 $lightblue;
 					// margin-left: 40vw;
@@ -91,7 +94,7 @@
 					// transform: scaleX(1)
 
 					@include md{
-						width: 70vw;
+						width: 65.14vw;
 						text-align: right;
 						padding-right: 100px;
 					}
@@ -113,8 +116,8 @@
 						padding-right: 0px;
 						padding-top: 0px;
 						padding-bottom: 0px;
-						font-size: rem-calc(17);
-						box-shadow: inset 0 0 0 0 $lightblue;
+						// font-size: rem-calc(17);
+						// box-shadow: inset 0 0 0 0 $lightblue;
 	
 					}
 			

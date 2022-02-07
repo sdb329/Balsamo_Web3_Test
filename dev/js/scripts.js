@@ -273,6 +273,7 @@ function checkMediaQuery(){
         // Then log this message to the console
         console.log('Media Query Matched!');
         openCloseMenu.pause();
+        // menuListners.pause();
       }
 
 }

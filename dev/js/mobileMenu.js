@@ -18,8 +18,7 @@ menuAnimation.to("#nav-container",{duration:0.5, x:0, alpha:1, stagger: 2})
 .to(".stagger-in-nav",{duration:0.01, x:0, y:"+=15", alpha:1, ease: "elastic", stagger: .05}, "-=.2")
 .to(".move-nav",{duration:0.5, x:-menuWidth, alpha:1}, "-=.5");
 
-window.addEventListener('load', menuAnimation);
-window.addEventListener('resize', menuAnimation);
+
 
 
 
