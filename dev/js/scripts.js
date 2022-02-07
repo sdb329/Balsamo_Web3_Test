@@ -29,6 +29,7 @@ import { displayWindowSize } from "./mobileResizing"
 import { menuAnimation, searchJumpTL} from "./mobileMenu"
 import { scrollPage } from "./pageScroll"
 import { menuListners } from "./menu"
+// import gsap from "gsap/all"
 
 
 
@@ -77,8 +78,9 @@ let menuScrollable = true;
 
 
 function openCloseMenu(){
-    
-    if(canISeeMenu === false){
+  
+
+        if(canISeeMenu === false){
         burgerTL.play();
         burgerJumpTL.play();
 
@@ -94,6 +96,13 @@ function openCloseMenu(){
         screenLocker();
     }
     
+    
+    // if(window.innerWidth >= 1048){
+    //     gsap.set(".move-nav", {
+            
+    //         x:0
+        
+    //     })
 
 }
 
@@ -204,6 +213,7 @@ window.addEventListener("resize", function(){
 
 for(const button of navButtons){
     button.addEventListener("click", checkScrolling);
+
     button.addEventListener("click", openCloseMenu);
 }
 
@@ -274,6 +284,9 @@ function checkMediaQuery(){
         console.log('Media Query Matched!');
         openCloseMenu.pause();
         // menuListners.pause();
+      }
+      else{
+          openCloseMenu();
       }
 
 }

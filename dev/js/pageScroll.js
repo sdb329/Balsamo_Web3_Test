@@ -9,5 +9,11 @@ let idArray = ["#why-nj", "#regions", "#places-to-visit", "#places-to-stay", "#d
 
 export function scrollPage(index){
 
-gsap.to(window, {duration: 3, scrollTo:{y:idArray[index],offsetY: 120}});
+gsap.to(window, {duration: 3, scrollTo:{y:idArray[index],offsetY: 0}});
+
+
+
+    if(window.clientWidth <= 1024){
+        gsap.to(window, {duration: 3, scrollTo:{y:idArray[index]}});
+    }
 }
