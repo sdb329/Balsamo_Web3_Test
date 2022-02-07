@@ -18,6 +18,14 @@ export function displayWindowSize(){
     // console.log(menuHeight);
     // gsap.set("#nav-container", {y:"-=300"})
 
+    // if(window.clientWidth <= 1024){
+    //     gsap.set("nav-container",{x:menuHeight, alpha:0});
+    //     gsap.set(".stagger-in-nav",{alpha:0});
+    // }
+    // else{
+
+    // }
+
     if(document.documentElement.clientWidth <= 1024){
         gsap.set("#nav-container", {x:menuHeight,
             

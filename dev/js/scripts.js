@@ -78,7 +78,7 @@ let menuScrollable = true;
 
 
 function openCloseMenu(){
-  
+    if(window.innerWidth <= 1048){
 
         if(canISeeMenu === false){
         burgerTL.play();
@@ -95,7 +95,7 @@ function openCloseMenu(){
         canISeeMenu = false;
         screenLocker();
     }
-    
+    }
     
     // if(window.innerWidth >= 1048){
     //     gsap.set(".move-nav", {
