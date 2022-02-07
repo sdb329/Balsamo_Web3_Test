@@ -488,7 +488,6 @@ button:hover {
   padding-top: 10vh;
   padding-bottom: 10vh;
   text-align: center;
-  width: 100vw;
 }
 @media (min-width: 768px) {
   #nav-container ul li button:hover {
@@ -499,19 +498,17 @@ button:hover {
 }
 @media (min-width: 1024px) {
   #nav-container ul li button {
-    color: #B3ECFF;
     font-size: 1.0625rem;
     padding: 0px;
+    text-align: right;
   }
   #nav-container ul li button:hover {
     background-color: transparent;
-    color: #C8F8D6;
-    bottom: 0;
-    left: 0;
     width: fit-content;
     padding-right: 0px;
     padding-top: 0px;
     padding-bottom: 0px;
+    font-size: 1.25rem;
   }
 }
 

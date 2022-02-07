@@ -76,26 +76,36 @@ let menuScrollable = true;
 //  }
 
 
-function openCloseMenu(){
+
+    function openCloseMenu(){
+        if(window.innerWidth <= 1048){
     
-    if(canISeeMenu === false){
-        burgerTL.play();
-        burgerJumpTL.play();
-
-        menuAnimation.play();
-        canISeeMenu = true;
-        screenLocker();
-    }else{
-        burgerJumpTL.pause()
-
-        burgerTL.reverse();
-        menuAnimation.reverse();
-        canISeeMenu = false;
-        screenLocker();
+            if(canISeeMenu === false){
+            burgerTL.play();
+            burgerJumpTL.play();
+           
+            menuAnimation.play();
+            canISeeMenu = true;
+            screenLocker();
+        }else{
+            burgerJumpTL.pause()
+          
+            burgerTL.reverse();
+            menuAnimation.reverse();
+            canISeeMenu = false;
+            screenLocker();
+        }
+        }
+        
+        // if(window.innerWidth >= 1048){
+        //     gsap.set(".move-nav", {
+                
+        //         x:0
+            
+        //     })
+    
     }
-    
 
-}
 
 function screenLocker(){
 
@@ -268,23 +278,25 @@ window.addEventListener('resize', displayWindowSize);
 
 // const mediaQuery = window.matchMedia('(min-width: 1048px)')
 
-function checkMediaQuery(){
-    if (window.innerWidth > 1048) {
-        // Then log this message to the console
-        console.log('Media Query Matched!');
-        openCloseMenu.pause();
-        // menuListners.pause();
-      }
+// function checkMediaQuery(){
+//     if (window.innerWidth < 1048) {
+//         // Then log this message to the console
+//         console.log('Media Query Matched!');
+//         menuListners.play();
+//       }else{
+//         menuListners.pause();
+//       }
 
-}
+// }
 
 // if (mediaQuery.matches) {
 //     console.log("media query working")
 //   }
 
-  window.addEventListener('resize', checkMediaQuery);
+//   window.addEventListener('resize', checkMediaQuery);
 
 window.addEventListener('load', menuAnimation);
 window.addEventListener('resize', menuAnimation);
 
 window.addEventListener('load', menuListners);
+window.addEventListener('resize', menuListners);
