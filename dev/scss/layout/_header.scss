@@ -10,6 +10,8 @@ header {
 	z-index:1000;
 
 
+
+
 	#navigation-header {
 		display: grid;
 		// z-index: 200;
@@ -89,7 +91,7 @@ header {
 			grid-area: nav;
 			// padding: 20px 10px 10px;
 			width: 100vw;
-			height: 75vh;
+			height: 100vh;
 			z-index: 0;
 			@include md {
 				width: 70vw;
@@ -109,6 +111,14 @@ header {
 		
 			}
 		}
+	}
+
+	.nav-btns{
+		@include lg{
+			padding-right: 0px;
+			margin-bottom: 30px;
+		}
+
 	}
 	// #search-md-flex {
 	// 	display: flex;
@@ -140,41 +150,72 @@ header {
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			
 
+			
 			@include md{
 				padding-right: 180px;
+			
+				
 			}
 			@include lg{
 				padding-right: 0px;
 				padding-bottom: 0px;
 				padding-left: 10px;
 			}
-			>i {
-				color: $lightgreen;
-				font-size: rem-calc(40);
-				padding-right: 16px;
+			// >i {
+			// 	color: $lightgreen;
+			// 	font-size: rem-calc(40);
+			// 	padding-right: 16px;
 
-				@include md{
-					padding-right: 20px;
-					font-size: rem-calc(80);
-				}
-				@include lg{
-					padding-right: 20px;
-					font-size: rem-calc(30);
-				}
-			}
+			// 	@include md{
+			// 		padding-right: 20px;
+			// 		font-size: rem-calc(50);
+			// 	}
+			// 	@include lg{
+			// 		padding-right: 20px;
+			// 		font-size: rem-calc(30);
+			// 	}
+			// }
+
+
 			>form {
-				border: 1px $lightgreen solid;
-				border-radius: 40px;
+				// border: 1px $lightgreen solid;
+				// border-radius: 40px;
+				// height: 50px;
+				// width: 300px;
+				padding: 0px;
 				
-				padding: 20px;
 				// display: flex;
 
+				display: grid;
+		grid-template-areas: "search-bar-on-top";
+		grid-template-columns: auto;
+
+		@include lg{
+			margin-left: 50px;
+			padding-top: 8px;
+		}
+				#search-message{
+				// border: 1px $lightgreen solid;
+				margin-bottom: 50px;
+				margin-right: 20px;
+				margin-left: 20px;
+				grid-area: search-bar-on-top;
+				z-index: 200;
+			
+				}
+				#search-bar-svg{
+					// padding-right: 70px;
+					
+					grid-area: search-bar-on-top;
+				
+				}
 				@include md{
-					padding: 10px;
+					padding: 0px;
 				}		
 				@include lg{
-					padding: 0px;
+					// padding-bottom: 20px;
 					font-size: rem-calc(12);
 				}			
 				>input {
@@ -186,6 +227,7 @@ header {
 					color: $lightblue;
 					font-variation-settings: "wght"600;
 					font-weight: 300;
+				
 
 					&::placeholder {
 						color: white;
