@@ -88,7 +88,7 @@ let menuScrollable = true;
             canISeeMenu = true;
             screenLocker();
         }else{
-            burgerJumpTL.pause()
+            burgerJumpTL.pause();
           
             burgerTL.reverse();
             menuAnimation.reverse();
@@ -138,7 +138,27 @@ for(const glass of searchJumpTest){
 }
 
 
+let waveMoveTest = document.querySelectorAll(".nav-btns")
 
+for(const flow of waveMoveTest){
+    flow.addEventListener("mouseenter", movingWavesStart);
+    flow.addEventListener("mouseleave", movingWavesStop);
+}
+
+
+function movingWavesStart(){
+
+    oceanWavesMove.play();
+
+
+}
+
+function movingWavesStop(){
+
+    oceanWavesMove.pause();
+
+
+}
 
 // let iconJumpingSearch = false;
 

@@ -14,6 +14,9 @@ gsap.set("#search-bar-open", {
 
 })
 
+gsap.set(".ocean-clip", {alpha: 1})
+
+
 export function displayWindowSize(){
 
     let menu = document.querySelector("#nav-container");
