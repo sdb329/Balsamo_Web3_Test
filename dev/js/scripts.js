@@ -243,7 +243,9 @@ function checkScrolling(e) {
 
 
     // console.log("working")
-    const indexValue = [].indexOf.call(navButtons, e.target)
+    const indexValue = [].indexOf.call(navButtons, e.target);
+    e.stopPropagation();
+    e.preventDefault();
     if (indexValue != -1) {
         scrollPage(indexValue - 1);
     }

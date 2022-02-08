@@ -431,6 +431,9 @@ button:hover {
 /* =============
     Navigation
 ============= */
+#nav-container {
+  background-color: #15344F;
+}
 #nav-container ul {
   height: 90%;
   width: 100%;
@@ -456,6 +459,8 @@ button:hover {
   }
 }
 #nav-container ul li {
+  background-color: #15344F;
+  padding-top: 5%;
   margin-bottom: 20px;
   text-align: right;
 }
@@ -466,11 +471,12 @@ button:hover {
     margin-bottom: 0px;
   }
 }
+#nav-container ul li .nav-btns * {
+  pointer-events: none;
+}
 #nav-container ul li button {
   padding-right: 0px;
   color: #B3ECFF;
-  text-decoration: none;
-  z-index: 1;
   background-color: transparent;
   font-size: 1.875rem;
   font-family: "Karla", sans-serif;
@@ -480,23 +486,7 @@ button:hover {
   margin-top: -20px;
   display: flex;
   justify-content: center;
-  text-align: center;
   align-items: center;
-}
-#nav-container ul li button > p {
-  background: linear-gradient(to bottom, #fff0 100%, #C8F8D6 0.01%);
-  transition: 0.25s;
-  border-radius: 10px;
-  padding: 10px;
-}
-#nav-container ul li button > p:hover {
-  background: linear-gradient(to bottom, #fff0 0%, #C8F8D6 0.01%);
-  transition: 0.25s;
-}
-@media (min-width: 1024px) {
-  #nav-container ul li button > p:hover {
-    background: linear-gradient(to bottom, #fff0 100%, #C8F8D6 0.01%);
-  }
 }
 @media (min-width: 768px) {
   #nav-container ul li button {
@@ -507,6 +497,11 @@ button:hover {
   #nav-container ul li button {
     flex-wrap: wrap-reverse;
   }
+}
+#nav-container ul li button > span {
+  display: inline-block;
+  border-radius: 10px;
+  padding: 10px;
 }
 #nav-container ul li button .nav-label {
   order: 2;
@@ -603,7 +598,6 @@ header #navigation-header #logo-container button {
   color: #15344F;
   display: inline-block;
   font-size: 1.125rem;
-  padding: 10px 20px;
   transition: 0.25s;
 }
 header #navigation-header #logo-container button:hover {
@@ -628,7 +622,6 @@ header #navigation-header #burger-container svg {
   font-size: 3.125rem;
 }
 header #navigation-header #nav-container {
-  background-color: #15344F;
   position: fixed;
   top: 100px;
   grid-area: nav;
