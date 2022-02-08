@@ -28,7 +28,7 @@ import { burgerTL, burgerJumpTL } from "./burgerAnimation"
 import { displayWindowSize } from "./mobileResizing"
 import { menuAnimation, searchJumpTL} from "./mobileMenu"
 import { scrollPage } from "./pageScroll"
-import { menuListners } from "./menu"
+import { menuListners, oceanWavesMove } from "./menu"
 
 
 
@@ -300,3 +300,8 @@ window.addEventListener('resize', menuAnimation);
 
 window.addEventListener('load', menuListners);
 window.addEventListener('resize', menuListners);
+
+
+
+window.addEventListener('load', oceanWavesMove);
+window.addEventListener('resize', oceanWavesMove);

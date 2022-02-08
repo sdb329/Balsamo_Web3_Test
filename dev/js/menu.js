@@ -10,8 +10,9 @@ console.log(navButtonsAnimate.length);
 console.log(navSvgOcean.width + " is the width of the svg");
 
 
-
-
+export function oceanWavesMove () {
+    gsap.to(".ocean-clip",{duration:.7, x:"-=23", ease: "none", repeat:-1}, "start")
+}
 
 export function menuListners (){
 
@@ -67,7 +68,7 @@ export function menuListners (){
         //     });
         // }
 
-        gsap.to(".ocean-clip",{duration:.7, x:"-=23", ease: "none", repeat:-1}, "start")
+        
    
 
     }

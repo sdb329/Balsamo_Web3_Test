@@ -477,6 +477,7 @@ button:hover {
   cursor: pointer;
   border-radius: 0px;
   transition: 0.25s;
+  margin-top: -20px;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -509,12 +510,10 @@ button:hover {
   }
 }
 #nav-container ul li button:hover {
-  font-size: 2.5rem;
+  font-size: 2.3125rem;
   padding-top: 10vh;
   padding-bottom: 10vh;
-  text-align: center;
   width: 100vw;
-  justify-content: center;
   text-align: center;
   align-items: center;
 }
@@ -523,11 +522,12 @@ button:hover {
     width: 69.7vw;
     text-align: right;
     padding-right: 100px;
+    justify-content: flex-end;
   }
 }
 @media (min-width: 1024px) {
   #nav-container ul li button {
-    font-size: 1.0625rem;
+    font-size: 0.9375rem;
     padding: 0px;
     text-align: right;
   }
@@ -537,8 +537,12 @@ button:hover {
     padding-right: 0px;
     padding-top: 0px;
     padding-bottom: 0px;
-    font-size: 1.25rem;
+    font-size: 1rem;
+    justify-content: center;
   }
+}
+#nav-container ul li #search-md-flex {
+  z-index: 1000;
 }
 
 /* =============
