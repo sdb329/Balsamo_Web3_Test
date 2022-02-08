@@ -488,6 +488,7 @@ button:hover {
   padding-top: 10vh;
   padding-bottom: 10vh;
   text-align: center;
+  width: 100vw;
 }
 @media (min-width: 768px) {
   #nav-container ul li button:hover {
