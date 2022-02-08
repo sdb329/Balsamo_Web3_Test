@@ -2,7 +2,11 @@ import { gsap } from "gsap";
 
 // import gsap from "gsap/all";
 
+gsap.set(".ocean-clip", {
 
+    // scale: 2,
+    transformOrigin: "50%, 50%"
+})
 
 gsap.set("#search-bar-open", {
             
