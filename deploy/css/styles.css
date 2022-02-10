@@ -431,9 +431,6 @@ button:hover {
 /* =============
     Navigation
 ============= */
-#nav-container {
-  background-color: #15344F;
-}
 #nav-container ul {
   height: 90%;
   width: 100%;
@@ -459,16 +456,32 @@ button:hover {
   }
 }
 #nav-container ul li {
+  z-index: 50;
   background-color: #15344F;
-  padding-top: 5%;
-  margin-bottom: 20px;
+  width: 100%;
+  padding-top: 6%;
+  padding-bottom: 5%;
   text-align: right;
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  #nav-container ul li {
+    padding-top: 3.5%;
+    padding-bottom: 4%;
+    justify-content: flex-end;
+  }
 }
 @media (min-width: 1024px) {
   #nav-container ul li {
     align-items: center;
     display: flex;
     margin-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 32px;
+    padding-bottom: 0px;
+    width: fit-content;
   }
 }
 #nav-container ul li .nav-btns * {
@@ -596,6 +609,7 @@ header #navigation-header {
 header #navigation-header #logo-container {
   grid-area: survival;
   padding-left: 16px;
+  z-index: 40;
 }
 header #navigation-header #logo-container button {
   background-color: #B3ECFF;
@@ -867,11 +881,16 @@ header #search-flex #search-bar > form > input:-ms-input-placeholder {
 }
 
 #hero {
-  padding-top: 100px;
+  padding-top: 90px;
 }
 @media (min-width: 768px) {
   #hero {
     padding-top: 100px;
+  }
+}
+@media (min-width: 1024px) {
+  #hero {
+    padding-top: 120px;
   }
 }
 #hero a {

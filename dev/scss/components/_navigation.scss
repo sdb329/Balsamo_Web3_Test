@@ -4,19 +4,21 @@
 #nav-container {
 
 
-	background-color: $darkblue;
+	// background-color: $darkblue;
 	
 
 
 	ul {
 		height: 90%;
 		width: 100%;
+			// background-color: $darkblue;
 		display: flex;
 		line-height: 30px;
 		justify-content: center;
 		align-items: center;
-		// text-align: right;
+		// text-align: center;
 		flex-direction: column;
+		// margin-top: -5%;
 
 		@include md {
 		text-align: right;
@@ -31,20 +33,34 @@
 			line-height: 20px;
 		}
 		li {
+			z-index: 50;
 			background-color: $darkblue;
-			// width: 100%;
-			padding-top: 5%;
-			margin-bottom: 20px;
+			width: 100%;
+			padding-top: 6%;
+			padding-bottom: 5%;
+			// margin-bottom: 20px;
 			text-align: right;
+			
 			// align-self: flex-end;
 			
 
 			
-
+			display: flex;
+			justify-content: center;
+			@include md{
+				padding-top: 3.5%;
+				padding-bottom: 4%;
+				justify-content: flex-end;	
+			}
 			@include lg {
 				align-items: center;
 				display: flex;
 				margin-bottom: 0px;
+				padding-left: 0px;
+				padding-right: 0px;
+				padding-top: 32px;
+				padding-bottom: 0px;
+				width: fit-content;
 			}
 
 			.nav-btns *{

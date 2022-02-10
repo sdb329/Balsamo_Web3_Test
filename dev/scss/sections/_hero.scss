@@ -1,7 +1,10 @@
 #hero {
-	padding-top: 100px;
+	padding-top: 90px;
 	@include md {
 		padding-top: 100px;
+	}
+	@include lg {
+		padding-top: 120px;
 	}
 
 	

@@ -26,7 +26,7 @@ export function displayWindowSize(){
     // gsap.set("#nav-container", {y:"-=300"})
 
     if(document.documentElement.clientWidth <= 1024){
-        gsap.set("#nav-container", {x:menuHeight,
+        gsap.set(".nav-btns-li", {x:menuHeight,
             
             alpha:0
         
@@ -34,17 +34,27 @@ export function displayWindowSize(){
         gsap.set(".stagger-in-nav", {
             
             alpha:0
+        
+        })
+        gsap.set(".nav-svg-full", {
+            
+            alpha:1
         
         })
 
     
     }else{
         // console.log("un-hide");
-        gsap.set("#nav-container",{x:0,
+        gsap.set(".nav-btns-li",{x:0,
         alpha:1})
 
         gsap.set(".stagger-in-nav", {
             alpha:1
+        })
+        gsap.set(".nav-svg-full", {
+            
+            alpha:1
+        
         })
     }
 }
