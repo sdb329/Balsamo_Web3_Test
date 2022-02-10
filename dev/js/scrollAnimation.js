@@ -6,7 +6,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 export function scrollAnimation(animationElement, triggerElement){
-    // console.log("this is working test123");
 
     const tl = new gsap.timeline();
 
@@ -19,7 +18,6 @@ export function scrollAnimation(animationElement, triggerElement){
         
         
         {
-                // duration: 6,
                 alpha: 1,
        
                 scrollTrigger: {
@@ -34,8 +32,6 @@ export function scrollAnimation(animationElement, triggerElement){
 }
 
 export function scrollAnimation2(animationElement, triggerElement){
-    // console.log("this is working test123");
-
     const tl = new gsap.timeline();
 
 
@@ -47,7 +43,6 @@ export function scrollAnimation2(animationElement, triggerElement){
         
         
         {
-                // duration: 6,
                 alpha: 1,
                 x: "-=20",
        
@@ -63,7 +58,6 @@ export function scrollAnimation2(animationElement, triggerElement){
 }
 
 export function scrollAnimationButton1(animationElement, triggerElement){
-    // console.log("this is working test123");
 
     const tl = new gsap.timeline();
 
@@ -77,7 +71,6 @@ export function scrollAnimationButton1(animationElement, triggerElement){
         
         
         {
-                // duration: 6,
                 alpha: 1,
                 y: "+=50",
                 scrollTrigger: {

@@ -14,12 +14,9 @@ header {
 
 	#navigation-header {
 		display: grid;
-		// z-index: 200;
 		grid-template-areas: "survival search burger"
             "nav nav nav";
 		grid-template-columns: auto 40% 15%;
-		
-		// padding-right: 16px;
 		padding-top: 32px;
 
 		@include md {
@@ -47,7 +44,6 @@ header {
 				color: $darkblue;
 				display: inline-block;
 				font-size: rem-calc(18);
-				// padding: 10px 20px;
 				transition: 0.25s;
 				&:hover {
 					background-color: $darkblue;
@@ -76,25 +72,12 @@ header {
 				font-size: rem-calc(50);
 			}
 		}
-		// #flex-nav-box{
 
-		// 	width: 100vw;
-		// 	height: 60vh;			
-		// 	background-color: $lightblue;
-		// 	z-index: 0;
-		// }
 		#nav-container {
-		
 
-		
-			// background-color: $darkblue;
-			// display: none;
-			// padding-right: 16px;
 			position: fixed;
-			// right: -10px;
 			top: 100px;
 			grid-area: nav;
-			// padding: 20px 10px 10px;
 			width: 100vw;
 			height: 100vh;
 			z-index: 0;
@@ -106,7 +89,6 @@ header {
 				width: 100%;
 				height: fit-content;
 				background-color: $darkblue;
-				// display: block !important;
 				position: static;
 				z-index: 7000;
 
@@ -125,32 +107,18 @@ header {
 		}
 
 	}
-	// #search-md-flex {
-	// 	display: flex;
-	// 	flex-direction: column;
-	// 	justify-content: center;
-	// 	padding-top: 130px;
-	// 	@include lg {
-	// 		padding-top: 100px;
-	// 	}
-	// }
+
 	#search-flex {
-		// display: flex;
-		// margin-right: 16px;
-		// justify-content: center;
-		// flex-direction: column;
-		// align-items: center;
+
 		.search-flex-center{
 			color: transparent;
 		}
 
 
 		#search-bar {
-			// background-color: $white;
+
 			background-color: transparent;
 			padding-bottom: 40px;
-			// margin-left: 10px;
-			// padding: 30px;
 			width: 100%;
 			display: flex;
 			justify-content: center;
@@ -168,30 +136,11 @@ header {
 				padding-bottom: 0px;
 				padding-left: 10px;
 			}
-			// >i {
-			// 	color: $lightgreen;
-			// 	font-size: rem-calc(40);
-			// 	padding-right: 16px;
-
-			// 	@include md{
-			// 		padding-right: 20px;
-			// 		font-size: rem-calc(50);
-			// 	}
-			// 	@include lg{
-			// 		padding-right: 20px;
-			// 		font-size: rem-calc(30);
-			// 	}
-			// }
 
 
 			>form {
-				// border: 1px $lightgreen solid;
-				// border-radius: 40px;
-				// height: 50px;
-				// width: 300px;
+
 				padding: 0px;
-				
-				// display: flex;
 
 				display: grid;
 		grid-template-areas: "search-bar-on-top";
@@ -202,7 +151,6 @@ header {
 			padding-top: 8px;
 		}
 				#search-message{
-				// border: 1px $lightgreen solid;
 				margin-bottom: 50px;
 				margin-right: 20px;
 				margin-left: 20px;
@@ -211,23 +159,21 @@ header {
 			
 				}
 				#search-bar-svg{
-					// padding-right: 70px;
 					
 					grid-area: search-bar-on-top;
+					
 				
 				}
 				@include md{
 					padding: 0px;
 				}		
 				@include lg{
-					// padding-bottom: 20px;
 					font-size: rem-calc(12);
 				}			
 				>input {
 					background-color: transparent;
 					border: none;
 					text-decoration: none;
-					// display: none;
 					border-radius: 0px;
 					color: $lightblue;
 					font-variation-settings: "wght"600;
@@ -236,47 +182,13 @@ header {
 
 					&::placeholder {
 						color: white;
-						// font-size: rem-calc(2);
 					}
 					&:-ms-input-placeholder {
 						color: $lightblue;
 						font-size: rem-calc(24);
 					}
-					// &::-ms-input-placeholder {
-					// 	color: $green;
-					// }
 				}
 			}
 		}
 	}
-
-
-	// #header-button {
-	// 	display: flex;
-	// 	justify-content: center;
-	// 	>button {
-	// 		border-radius: 0px;
-	// 		flex-grow: 1;
-	// 	}
-	// }
-	// @include md {
-	// 	#search-md-flex {
-	// 		display: flex;
-	// 		flex-direction: row;
-	// 		justify-content: space-between;
-	// 		#header-button {
-	// 			flex-grow: .2;
-	// 			order: 1;
-	// 			padding-left: 16px;
-	// 			>button {
-	// 				border-radius: 20px;
-	// 				margin-bottom: 10px;
-	// 			}
-	// 		}
-	// 		#search-flex {
-	// 			flex-grow: .2;
-	// 			order: 2;
-	// 		}
-	// 	}
-	// }
 }

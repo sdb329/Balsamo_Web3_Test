@@ -1,26 +1,6 @@
 
 
 
-// import $ from "jquery";
-
-// let $nav = $('nav[data-nav]');
-// let isVisible = false;
-
-// $(".nav-btns").on("click", function(){
-//     // console.log("click");
-//     if(isVisible === false){
-//         $nav.show();
-//         isVisible = true;
-//     }
-//     else{
-//         $nav.hide();
-//         isVisible = false;
-//     }
-// })
-
-// import { gsap } from "gsap";
-// import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
-// gsap.registerPlugin(DrawSVGPlugin);
 
 import { scrollAnimation, scrollAnimation2, scrollAnimationButton1 } from "./scrollAnimation"
 
@@ -38,44 +18,6 @@ var burgerButton = document.querySelector("#burger-container");
 let canISeeMenu = false;
 
 let menuScrollable = true;
-
-// let menuAnimationResize = false;
-
-
-
-// if(menuAnimationResize === false){
-//     openCloseMenu();
-// }else{
-//     burgerJumpTL.pause()
-
-//     burgerTL.pause();
-//     menuAnimation.pause();
-// }
-
-
-// if(document.documentElement.clientWidth <= 1024){
-//     menuAnimationResize === false}
-// else{
-//     menuAnimationResize === true
-// }
-
-
-
-// window.addEventListener('load', menuAnimationResize);
-// window.addEventListener('resize', menuAnimationResize);
-
-
-
-// if(document.documentElement.clientWidth <= 1024){
-
-//  canISeeMenu = false;}
-//  else{
-//     burgerJumpTL.pause()
-//     burgerTL.pause();
-//     menuAnimation.pause();
-//  }
-
-
 
     function openCloseMenu(){
         if(window.innerWidth <= 1048){
@@ -97,13 +39,6 @@ let menuScrollable = true;
         }
         }
         
-        // if(window.innerWidth >= 1048){
-        //     gsap.set(".move-nav", {
-                
-        //         x:0
-            
-        //     })
-    
     }
 
 
@@ -125,7 +60,6 @@ function screenLocker(){
 burgerButton.addEventListener("click", openCloseMenu);
 
 let navButtons = document.querySelectorAll(".nav-btns");
-// console.log(navButtons);
 
 
 let searchJumpTest = document.querySelectorAll(".search-msg")
@@ -160,32 +94,13 @@ function movingWavesStop(){
 
 }
 
-// let iconJumpingSearch = false;
-
-
-// function iconJump(){
-//     if(iconJumpingSearch === false){
-//         console.log("this is working mouse enter")
-//         searchJumpTL.play();
-//         iconJumpingSearch = true;
-//     }else{
-//         console.log("this is working mouse leave")
-//         // searchStopJumpTL.play();
-//         searchJumpTL.reverse();
-//         iconJumpingSearch = false;
-//     }
-
-// }
-
 
 function iconJump(){
-        // console.log("this is working mouse enter")
         searchJumpTL.play();
  
 
 }
 function iconJumpOut(){
-    // console.log("this is working mouse enter")
     searchJumpTL.reverse();
  
 
@@ -194,42 +109,11 @@ function iconJumpOut(){
 
 window.addEventListener("resize", function(){
     if(canISeeMenu === true){
-        // console.log("fire");
         openCloseMenu();
 
     }
 });
 
-
-
-// function menuAnimationStop(){
-
-//         for(let i = 0; i < navButtons.length; i++){
-//             navButtons[i].addEventListener("click", checkScrolling);
-//             navButtons[i].addEventListener("click", openCloseMenu);
-        
-//         }
-   
-
-// }
-
-
-
-// if(document.documentElement.clientWidth <="1024px"){
-//     menuAnimationStop();
-// }else{
-    
-// }
-
-
-
-
-
-// for(let i = 0; i < navButtons.length; i++){
-//     navButtons[i].addEventListener("click", checkScrolling);
-//     navButtons[i].addEventListener("click", openCloseMenu);
-
-// }
 
 
 for(const button of navButtons){
@@ -242,7 +126,6 @@ for(const button of navButtons){
 function checkScrolling(e) {
 
 
-    // console.log("working")
     const indexValue = [].indexOf.call(navButtons, e.target);
     e.stopPropagation();
     e.preventDefault();
@@ -255,15 +138,7 @@ function checkScrolling(e) {
 
 
 window.addEventListener('load', function(){
-    // let regionElements = ["#region-1, #region-2, #region-3, #region-4, #region-5, #region-6,"];
-
-
-
-
-
-
-
-
+ 
 
 
     scrollAnimation("#region-1", "#region-1");
@@ -298,24 +173,6 @@ window.addEventListener('load', function(){
 window.addEventListener('load', displayWindowSize);
 window.addEventListener('resize', displayWindowSize);
 
-// const mediaQuery = window.matchMedia('(min-width: 1048px)')
-
-// function checkMediaQuery(){
-//     if (window.innerWidth < 1048) {
-//         // Then log this message to the console
-//         console.log('Media Query Matched!');
-//         menuListners.play();
-//       }else{
-//         menuListners.pause();
-//       }
-
-// }
-
-// if (mediaQuery.matches) {
-//     console.log("media query working")
-//   }
-
-//   window.addEventListener('resize', checkMediaQuery);
 
 window.addEventListener('load', menuAnimation);
 window.addEventListener('resize', menuAnimation);

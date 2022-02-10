@@ -2,23 +2,16 @@
     Navigation
 ============= */
 #nav-container {
-
-
-	// background-color: $darkblue;
-	
-
+// z-index: -20;
 
 	ul {
 		height: 90%;
 		width: 100%;
-			// background-color: $darkblue;
 		display: flex;
 		line-height: 30px;
 		justify-content: center;
 		align-items: center;
-		// text-align: center;
 		flex-direction: column;
-		// margin-top: -5%;
 
 		@include md {
 		text-align: right;
@@ -36,25 +29,20 @@
 			z-index: 50;
 			background-color: $darkblue;
 			width: 100%;
-			padding-top: 6%;
-			padding-bottom: 5%;
-			// margin-bottom: 20px;
+			padding-top: 3%;
+			padding-bottom: 3%;
 			text-align: right;
-			
-			// align-self: flex-end;
-			
-
-			
 			display: flex;
 			justify-content: center;
+
 			@include md{
 				padding-top: 3.5%;
 				padding-bottom: 4%;
 				justify-content: flex-end;	
 			}
 			@include lg {
+				background-color: transparent;
 				align-items: center;
-				display: flex;
 				margin-bottom: 0px;
 				padding-left: 0px;
 				padding-right: 0px;
@@ -72,24 +60,16 @@
 				padding-right: 0px;
 				
 				color: $lightblue;
-				// padding: 0px 0px;
-				// text-decoration: none;
-				// z-index: 1;
-				// width: 100vw;
 				background-color: transparent;
 				font-size: rem-calc(30);
 				font-family: 'Karla', sans-serif;
 				cursor: pointer;
 				border-radius: 0px;
-				// border: 1px solid red;
-
-				// box-shadow: inset 0 0 0 0 $lightblue;
 				transition: 0.25s;
 
 				margin-top: -40px;
 				display: flex;
 				justify-content: center;
-				// text-align: center;
 				align-items: center;
 				@include md{
 					padding-right: 100px;
@@ -105,20 +85,8 @@
 				
 				>span{
 					display: inline-block;
-					// background: linear-gradient(to bottom, #fff0 100%, $lightgreen .01%);
-					// transition: 0.25s;
 					border-radius: 10px;
 					padding: 10px;
-					// border: 1px solid red;
-					// &:hover {
-					// 	background: linear-gradient(to bottom, #fff0 0%, $lightgreen .01%);
-					// 	transition: 0.25s;
-
-					// 	@include lg{
-					// 		background: linear-gradient(to bottom, #fff0 100%, $lightgreen .01%);
-					// 	}
-
-					// }
 				}
 			
 				
@@ -144,29 +112,20 @@
 					}
 				}
 				&:hover {
-					// background-color: $lightblue;
-					// background-position: 0px 150px;
-					// color: $darkblue;
+
 					font-size: rem-calc(37);
 					
-					// width: 100vw;
+
 					padding-top: 10vh;
 					padding-bottom: 10vh;
-					// text-align: center;
 					width: 100vw;
-					// width: 100vw;
 					
 				text-align: center;
 				align-items: center;
 				text-decoration: underline;
-					// box-shadow: inset 100vw 0 0 0 $lightblue;
-					// margin-left: 40vw;
-					// z-index: 1;
-					// transform: scaleX(1)
 
 					@include md{
 						width: 69.7vw;
-						// height: 15vh;
 						text-align: right;
 						padding-right: 100px;
 						justify-content: flex-end;
@@ -202,43 +161,6 @@
 				z-index: 1000;
 			}
 
-			// button {
-			// 	background-color: $green;
-			// 	border: none;
-			// 	border-radius: 10px;
-			// 	color: $lightblue;
-			// 	cursor: pointer;
-			// 	font-size: rem-calc(24);
-			// 	font-variation-settings: "wght"600;
-			// 	font-weight: 600;
-			// 	padding: 10px;
-			// 	transition: 0.25s;
-			// 	&:hover {
-			// 		background-color: $green-button;
-			// 	}
-			// 	@include md {
-			// 		font-size: rem-calc(24);
-			// 		padding: 10px 40px;
-			// 	}
-			// }
-
-
-			// a:link,
-            // a:visited {
-			// 	color: $lightgreen;
-			// 	padding: 0px 0px;
-			// 	text-decoration: none;
-			// 	transition: 0.25s;
-			// 	font-size: rem-calc(50);
-			// 	@include lg {
-			// 		color: $lightgreen;
-			// 		font-size: rem-calc(17);
-			// 	}
-			// 	&:hover,
-            //     &:active {
-			// 		color: $green;
-			// 	}
-			// }
 		}
 	}
 }

@@ -459,8 +459,8 @@ button:hover {
   z-index: 50;
   background-color: #15344F;
   width: 100%;
-  padding-top: 6%;
-  padding-bottom: 5%;
+  padding-top: 3%;
+  padding-bottom: 3%;
   text-align: right;
   display: flex;
   justify-content: center;
@@ -474,8 +474,8 @@ button:hover {
 }
 @media (min-width: 1024px) {
   #nav-container ul li {
+    background-color: transparent;
     align-items: center;
-    display: flex;
     margin-bottom: 0px;
     padding-left: 0px;
     padding-right: 0px;
