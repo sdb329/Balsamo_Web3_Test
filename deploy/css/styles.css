@@ -485,12 +485,13 @@ button:hover {
   transition: 0.25s;
   margin-top: -40px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 }
 @media (min-width: 768px) {
   #nav-container ul li button {
     padding-right: 100px;
+    justify-content: flex-end;
   }
 }
 @media (min-width: 1024px) {

@@ -72,16 +72,19 @@
 
 				margin-top: -40px;
 				display: flex;
-				justify-content: flex-end;
+				justify-content: center;
 				// text-align: center;
 				align-items: center;
 				@include md{
 					padding-right: 100px;
+					justify-content: flex-end;
+					
 				}
 
 				@include lg{
 					flex-wrap: wrap-reverse;
 					justify-content: center;
+					
 				}
 				
 				>span{
