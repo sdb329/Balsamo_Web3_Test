@@ -109,7 +109,9 @@ header {
 	}
 
 	#search-flex {
-
+		@include lg{
+			padding-right: 10px;
+		}
 		.search-flex-center{
 			color: transparent;
 		}

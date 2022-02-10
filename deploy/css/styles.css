@@ -440,6 +440,11 @@ button:hover {
     margin-top: -7%;
   }
 }
+@media (min-width: 1024px) {
+  #nav-container {
+    margin-top: 0;
+  }
+}
 #nav-container ul {
   height: 100%;
   width: 100%;
@@ -526,6 +531,16 @@ button:hover {
   display: inline-block;
   border-radius: 10px;
   padding: 10px;
+}
+@media (min-width: 768px) {
+  #nav-container ul li button #dns-text {
+    text-align: right;
+  }
+}
+@media (min-width: 1024px) {
+  #nav-container ul li button #dns-text {
+    text-align: center;
+  }
 }
 #nav-container ul li button .nav-label {
   order: 2;
@@ -680,6 +695,11 @@ header #navigation-header #nav-container {
   header .nav-btns {
     padding-right: 0px;
     margin-bottom: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  header #search-flex {
+    padding-right: 10px;
   }
 }
 header #search-flex .search-flex-center {

@@ -8,6 +8,9 @@ margin-top:-15% ;
 @include md{
 	margin-top:-7%;
 }
+@include lg{
+	margin-top:0;
+}
 
 
 	ul {
@@ -93,9 +96,19 @@ margin-top:-15% ;
 					display: inline-block;
 					border-radius: 10px;
 					padding: 10px;
+
+					
 				}
 			
-				
+				#dns-text{
+
+					@include md{
+						text-align: right;
+					}
+					@include lg{
+						text-align: center;
+					}
+				}
 
 				.nav-label{
 					order:2;
