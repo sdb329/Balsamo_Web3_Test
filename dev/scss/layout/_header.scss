@@ -31,6 +31,7 @@ header {
 			grid-template-areas: "survival  nav";
 			grid-template-columns: 25% auto;
 			padding-right: 16px;
+			padding-top: 0px;
 			
 		}
 		@include xl {
@@ -52,6 +53,9 @@ header {
 					border: 1px solid $lightblue;
 					color: $lightblue;
 				}
+			}
+			@include lg{
+				padding-top: 40px;
 			}
 		}
 

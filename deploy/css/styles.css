@@ -483,9 +483,9 @@ button:hover {
   cursor: pointer;
   border-radius: 0px;
   transition: 0.25s;
-  margin-top: -20px;
+  margin-top: -40px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 @media (min-width: 768px) {
@@ -496,6 +496,7 @@ button:hover {
 @media (min-width: 1024px) {
   #nav-container ul li button {
     flex-wrap: wrap-reverse;
+    justify-content: center;
   }
 }
 #nav-container ul li button > span {
@@ -515,7 +516,7 @@ button:hover {
 @media (min-width: 1024px) {
   #nav-container ul li button .nav-svg-full {
     order: 2;
-    margin-top: -100px;
+    margin-top: -400px;
   }
 }
 #nav-container ul li button:hover {
@@ -525,6 +526,7 @@ button:hover {
   width: 100vw;
   text-align: center;
   align-items: center;
+  text-decoration: underline;
 }
 @media (min-width: 768px) {
   #nav-container ul li button:hover {
@@ -581,6 +583,7 @@ header #navigation-header {
     grid-template-areas: "survival  nav";
     grid-template-columns: 25% auto;
     padding-right: 16px;
+    padding-top: 0px;
   }
 }
 @media (min-width: 1200px) {
@@ -604,6 +607,11 @@ header #navigation-header #logo-container button:hover {
   background-color: #15344F;
   border: 1px solid #B3ECFF;
   color: #B3ECFF;
+}
+@media (min-width: 1024px) {
+  header #navigation-header #logo-container {
+    padding-top: 40px;
+  }
 }
 header #navigation-header #burger-container {
   grid-area: burger;
