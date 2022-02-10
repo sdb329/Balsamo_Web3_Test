@@ -431,8 +431,17 @@ button:hover {
 /* =============
     Navigation
 ============= */
+#nav-container {
+  height: 100vh;
+  margin-top: -15%;
+}
+@media (min-width: 768px) {
+  #nav-container {
+    margin-top: -7%;
+  }
+}
 #nav-container ul {
-  height: 90%;
+  height: 100%;
   width: 100%;
   display: flex;
   line-height: 30px;

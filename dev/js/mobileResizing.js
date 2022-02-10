@@ -28,7 +28,8 @@ export function displayWindowSize(){
             alpha:0
         
         })
-        gsap.set("#nav-container", {x:menuHeight
+        gsap.set("#nav-container", {x:menuHeight,
+            alpha: 1
         
         })
         gsap.set(".stagger-in-nav", {

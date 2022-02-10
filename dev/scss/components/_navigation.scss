@@ -3,9 +3,15 @@
 ============= */
 #nav-container {
 // z-index: -20;
+height: 100vh;
+margin-top:-15% ;
+@include md{
+	margin-top:-7%;
+}
+
 
 	ul {
-		height: 90%;
+		height: 100%;
 		width: 100%;
 		display: flex;
 		line-height: 30px;

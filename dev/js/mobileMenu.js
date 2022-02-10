@@ -18,7 +18,7 @@ menuAnimation
 
 .to("#nav-container",{duration:0.001, x:0, alpha:1, stagger: .1})
 .to(".nav-btns-li",{duration:0.5, x:0, alpha:1, stagger: .1})
-.to("#nav-container",{duration:0.1, color: "#15344F"})
+.to("#nav-container",{duration:0.1, background: "#15344F"})
 .to(".stagger-in-nav",{duration:0.01, x:0, y:"+=15", alpha:1, ease: "elastic", stagger: .1}, "-=.7")
 .to(".move-nav",{duration:0.5, x:-menuWidth, alpha:1}, "-=.5");
 
