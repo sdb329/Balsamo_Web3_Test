@@ -18,7 +18,7 @@ const movingWaves = new gsap.timeline();
 if(window.innerWidth <= 1048){
 movingWaves.to(".ocean-clip",{duration:.7, x:"-=23", ease: "none", repeat:-1}, "start")}
 else{
-    movingWaves.set(".ocean-clip", {scale:0})
+    movingWaves.to(".ocean-clip", {scale:1, duration:.7, x:"-=23", ease: "none", repeat:-1})
 }
 
 

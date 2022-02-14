@@ -44,6 +44,7 @@ export function displayWindowSize(){
         })
 
     
+        
     }else{
         gsap.set(".nav-btns-li",{x:0,
         alpha:1})
